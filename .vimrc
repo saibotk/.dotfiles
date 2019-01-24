@@ -123,6 +123,12 @@ set foldlevel=99
 " remap code folding
 nnoremap <leader>g za
 
+" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 " html css js indents
 au BufNewFile,BufRead *.js, *.html, *.css
 	\ set tabstop=4 |
@@ -130,6 +136,8 @@ au BufNewFile,BufRead *.js, *.html, *.css
 	\ set shiftwidth=4
 
 " PLUGIN SETTINGS
+" polyglot setup
+let g:polyglot_disabled = ["latex"]
 " nerd tree setup
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 map <leader>e :NERDTreeToggle<CR>
