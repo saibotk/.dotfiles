@@ -15,8 +15,11 @@ Plugin 'gmarik/Vundle.vim'
 " comment plugin
 Plugin 'tpope/vim-commentary'
 
-" close xml/html tags
-Plugin 'docunext/closetag.vim'
+" brackets management
+Plugin 'machakann/vim-sandwich'
+
+" snippets
+Plugin 'SirVer/ultisnips'
 
 " WINDOW MANAGEMENT
 " tmux navigator
@@ -78,6 +81,7 @@ set wildmenu
 set term=screen-256color
 set autoread
 set lazyredraw
+set history=250
 
 " tabs and line wrap
 set tabstop=4
@@ -117,6 +121,10 @@ nnoremap <leader>g za
 
 " auto reload .vimrc on write
 autocmd BufWritePost .vimrc source %
+
+" ex command 
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " toggle hybrid number mode
 nnoremap <leader>h :set rnu!<CR>
@@ -239,8 +247,6 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
-nmap ]g :GitGutterNextHunk<CR>
-nmap [g :GitGutterPrevHunk<CR>
 augroup VimDiff
 	autocmd!
 	autocmd VimEnter,FilterWritePre * if &diff | GitGutterDisable | endif
@@ -264,3 +270,13 @@ nmap <Leader>b :ALEFix<CR>
 nnoremap <space>l :lnext<CR>
 nnoremap <space>p :lprevious<CR>
 
+" UltiSnip setup
+
+" Trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME."/.vim/snipps"]
