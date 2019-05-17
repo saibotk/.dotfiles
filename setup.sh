@@ -31,6 +31,13 @@ ln -s ~/.dotfiles/.inputrc ~/.inputrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.atom ~/.atom
 
+# install artisan plugin
+if ! [ -d ~/.oh-my-zsh/custom/plugins/artisan ]; then
+	echo '[INFO] Installing artisan plugin...'
+	git clone https://github.com/jessarcher/zsh-artisan.git ~/.oh-my-zsh/custom/plugins/artisan
+else
+	echo '[INFO] artisan plugin already installed.'
+fi
 
 # install vundle
 if ! [ -d ~/.vim/bundle/Vundle.vim ]; then

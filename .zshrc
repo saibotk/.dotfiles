@@ -14,6 +14,7 @@ plugins=(
 	gradle
 	per-directory-history
 	fzf
+	artisan
 )
 
 source $ZSH/oh-my-zsh.sh
