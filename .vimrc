@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -53,6 +53,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " LANGUAGE SUPPORT
 " vim ale for interaction with language servers
 Plugin 'w0rp/ale'
+
+" editorconfig plugin
+Plugin 'editorconfig/editorconfig-vim'
 
 " language packs
 Plugin 'sheerun/vim-polyglot'
@@ -140,11 +143,13 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-" html css js indents
-au BufNewFile,BufRead *.js, *.html, *.css
-	\ set tabstop=4 |
-	\ set softtabstop=4 |
-	\ set shiftwidth=4
+" auto expand brackets
+inoremap (; (<CR>)<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>}<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>]<C-c>O
+inoremap [, [<CR>],<C-c>O
 
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
@@ -253,7 +258,7 @@ augroup VimDiff
 augroup END
 
 " fzf setup
-nmap <C-z> :Buffers<CR>
+nmap <C-y> :Buffers<CR>
 nmap <Leader>f :Files<CR>
 let g:fzf_buffers_jump = 1
 
