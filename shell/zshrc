@@ -4,20 +4,20 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # plugins
-plugins=(
-	git
-	pip
-	docker
-	command-not-found
-	screen
-	dirhistory
-	gradle
-	per-directory-history
-	fzf
-	artisan
-)
+if [ -f ~/.dotfiles/shell/plugins ]
+then
+	source ~/.dotfiles/shell/plugins
+else
+    plugins=(
+        git
+        pip
+        screen
+        z
+    )
+fi
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -32,12 +32,14 @@ export EDITOR='vim'
 
 # aliases
 alias ll='ls -l'
-alias vi='vim'
 alias la='ls -la'
 alias :q='exit'
+alias fresh="source ~/.zshrc"
 
-if [ -f ~/.dotfiles/.localcommands ]; then
-	source ~/.dotfiles/.localcommands
+# localcommands
+if [ -f ~/.dotfiles/shell/localcommands ]
+then
+	source ~/.dotfiles/shell/localcommands
 fi
 
 # Tmuxinator autocomplete
@@ -52,4 +54,10 @@ fi
 
 export FZF_ALT_C_COMMAND='find . -type d'
 
-export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+if _has ruby;
+then
+    export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+fi
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

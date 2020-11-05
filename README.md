@@ -1,27 +1,15 @@
-# My Dotfiles with an installer
+# My Dotfiles
+The collection of my precious dotfiles.
 
-These are just my own config files for various applications like atom, vim and zsh...
-It also contains an installation script "setup.sh" to easily apply all of the settings and install some needed tools like
-Vundle.
-
-## Usage
-Make sure you have these packages installed:
-- atom
-- vim
-- zsh
-- oh-my-zsh
-- tmux
-- tmuxinator
-- the_silver_surfer
-- powerline-fonts
-- fzf
-
-If you want to install and apply all of the settings you just need to run:
+## Installation
+To install run this command: 
 ```
-cd ~
-git clone https://github.com/saibotk/.dotfiles
-.dotfiles/setup.sh
+git clone https://github.com/saibotk/.dotfiles ~/; cd ~/.dotfiles; ./install
 ```
+This should install all dependecies and create symlinks to all needed files. The only thing that you have to setup on your own is `nvim`.
+
+## Customization
+It is possible to load your own zsh-plugins and other commands you want to execute in the `.zshrc`. To add zsh-plugins add a `plugins` file to `~/.dotfiles/shell/`. An example is provided in `~/.dotfiles/shell/plugins.example`. The same thing applies to commands you want to execute in on shell startup, just add a `localcommands` file with your commands in `~/.dotfiles/shell/`.
 
 ## Atom packages
 If you plan on using you own atom package list, you can modify the "atom/packages.list".

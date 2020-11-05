@@ -1,0 +1,9 @@
+# plugins
+plugins=(
+    git
+    pip
+    screen
+    artisan
+    fzf
+    z
+)
