@@ -12,6 +12,9 @@ else
         git
         pip
         screen
+		artisan
+		dirhistory
+		per-directory-history
         z
     )
 fi
