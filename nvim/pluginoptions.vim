@@ -51,8 +51,25 @@ let g:vimwiki_list = [{'path': '~/.wiki/'}]
 " VIMTEX SETUP
 " =========================
 
-let g:vimtex_compile_progname = 'nvr'
+let g:vimtex_compiler_engine = 'lualatex'
+let g:vimtex_quickfix_mode = 0
 let g:tex_flavor = 'latex'
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_latexmk = {
+	\ 'backend' : 'nvim',
+	\ 'background' : 1,
+	\ 'build_dir' : '',
+	\ 'callback' : 1,
+	\ 'continuous' : 1,
+	\ 'executable' : 'latexmk',
+	\ 'hooks' : [],
+	\ 'options' : [ 
+	\   '-pdflatex=lualatex',
+	\   '-file-line-error',
+	\   '-synctex=1',
+	\   '-interaction=nonstopmode',
+	\ ],
+	\}
 
 " COLORS.LUA SETUP
 " =========================
@@ -123,3 +140,8 @@ let g:UltiSnipsEditSplit="vertical"
 " =========================
 
 let g:user_emmet_leader_key='<C-i>'
+
+" LANGUAGETOOL SETUP
+" =========================
+" autocmd Filetype tex LanguageToolSetUp
+let g:languagetool_cmd='/usr/bin/languagetool'
