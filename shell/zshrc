@@ -10,7 +10,7 @@ else
         git
         pip
         screen
-		artisan
+		laravel
 		dirhistory
 		per-directory-history
         z
@@ -73,3 +73,4 @@ if _has ruby;
 then
     export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 fi
+if [ -e /home/saibotk/.nix-profile/etc/profile.d/nix.sh ]; then . /home/saibotk/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
