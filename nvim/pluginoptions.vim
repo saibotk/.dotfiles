@@ -3,7 +3,16 @@
 " NERD TREE SETUP
 " =========================
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__'] "ignore files in NERDTree
+let NERDTreeChDirMode=2
+highlight Directory guifg=#D1D5DB ctermfg=blue
+highlight NERDTreeHelp guifg=#4B5563 ctermfg=gray
+highlight NERDTreeCWD guifg=#9CA3AF ctermfg=gray
+highlight NERDTreeFlags guifg=#4B5563 ctermfg=green
+highlight NERDTreeExecFile guifg=#DC2626 ctermfg=green
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " AIRLINE SETUP
 " =========================
@@ -40,7 +49,10 @@ let g:fzf_buffers_jump = 1
 
 " VIMWIKI SETUP
 " =========================
-let g:vimwiki_list = [{'path': '~/.wiki/'}]
+let g:vimwiki_list = [{'path': '~/.notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_hl_headers = 1
+let g:vimwiki_listsyms = '    X'
 
 " VIMTEX SETUP
 " =========================
@@ -98,7 +110,22 @@ let g:goyo_linenr = 0
 lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.intelephense.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.vuels.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.pyls.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.pylsp.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.texlab.setup{ on_attach=require'completion'.on_attach }
+lua <<EOF
+  lspconfig = require "lspconfig"
+  lspconfig.gopls.setup {
+    cmd = {"gopls", "serve"},
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  }
+EOF
 
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
@@ -112,3 +139,16 @@ let g:user_emmet_leader_key='<C-i>'
 " =========================
 " autocmd Filetype tex LanguageToolSetUp
 let g:languagetool_cmd='/usr/bin/languagetool'
+
+" TREESITTER
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+"   ensure_installed = "maintained",
+"   highlight = {
+"     enable = true,
+"   },
+"   indent = {
+"     enable = true
+"   },
+" }
+" EOF

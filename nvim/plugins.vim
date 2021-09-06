@@ -6,9 +6,6 @@ call plug#begin('~/.config/nvim/bundle')
 " Editor config
 Plug 'editorconfig/editorconfig-vim'
 
-" comment plugin
-Plug 'tpope/vim-commentary'
-
 " brackets management
 Plug 'tpope/vim-surround'
 
@@ -31,7 +28,10 @@ Plug 'junegunn/goyo.vim'
 " ===================
 
 " nerd-tree
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
 
 " fzf plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -53,7 +53,7 @@ Plug 'airblade/vim-gitgutter'
 " ===================
 
 " Plastic colorscheme
-Plug 'aonemd/kuroi.vim'
+Plug 'jidbo/kuroi.vim'
 
 " Color higlighting
 Plug 'norcalli/nvim-colorizer.lua'
@@ -70,6 +70,10 @@ Plug 'nvim-lua/completion-nvim'
 
 " Autoformatter
 Plug 'sbdchd/neoformat'
+
+" treesitter
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/playground'
 
 " disable latex before loading
 let g:polyglot_disabled = ["latex"]
