@@ -38,42 +38,24 @@ alias la='ls -la'
 alias :q='exit'
 alias fresh="source ~/.zshrc"
 
-# ZSH Theme
-ZSH_THEME=""
-
-PROMPT_COLOR="cyan"
-
 # localcommands
 if [ -f ~/.dotfiles/shell/localcommands ]
 then
 	source ~/.dotfiles/shell/localcommands
 fi
 
-PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT+=' %{$fg[${PROMPT_COLOR}]%}%c%{$reset_color%} $(git_prompt_info)'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
-
 # Tmuxinator autocomplete
 if [ -f ~/.bin/tmuxinator.zsh ]; then
     source ~/.bin/tmuxinator.zsh
 fi
 
-# fzf + ag configuration
-if _has fzf && _has ag; then
-	export FZF_CTRL_T_COMMAND='ag --hidden --nocolor --ignore .git -g ""'
-fi
-
-export FZF_ALT_C_COMMAND='find . -type d'
+# Set vim as default editor
+export EDITOR='nvim'
 
 if _has ruby;
 then
     export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 fi
-if [ -e /home/saibotk/.nix-profile/etc/profile.d/nix.sh ]; then . /home/saibotk/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
