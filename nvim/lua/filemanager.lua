@@ -4,33 +4,33 @@ vim.g.nvim_tree_icons = {
   default =        '',
   symlink =        '',
   git = {
-    unstaged =     "✗",
-    staged =       "✓",
-    unmerged =     "",
-    renamed =      "➜",
-    untracked =    "★",
-    deleted =      "",
+    unstaged =     '✗',
+    staged =       '✓',
+    unmerged =     '',
+    renamed =      '➜',
+    untracked =    '★',
+    deleted =      '',
    },
   folder = {
-    default =      "",
-    open =         "",
-    empty =        "",
-    empty_open =   "",
-    symlink =      "",
-    symlink_open = "",
+    default =      '',
+    open =         '',
+    empty =        '',
+    empty_open =   '',
+    symlink =      '',
+    symlink_open = '',
    },
 }
 
 
 -- extra options
-vim.g.nvim_tree_indent_markers=1
-vim.g.nvim_tree_add_trailing=1
-vim.g.nvim_tree_special_files= {
-  ["README.md"] = true,
-  ["readme.md"] = true,
+vim.g.nvim_tree_indent_markers = 1
+vim.g.nvim_tree_add_trailing = 1
+vim.g.nvim_tree_special_files = {
+  ['README.md'] = true,
+  ['readme.md'] = true,
   Pipfile = true,
   Makefile = true,
-  ["package.json"] = true,
+  ['package.json'] = true,
 }
 
 -- colors
@@ -57,7 +57,7 @@ require'nvim-tree'.setup {
     auto_open = true,
   },
   system_open = {
-    cmd  = "open"
+    cmd  = 'open'
   },
   filters = {
     dotfiles = true
@@ -74,6 +74,6 @@ require'nvim-tree'.setup {
     },
   },
   trash = {
-    cmd = "trash"
+    cmd = 'trash'
   }
 }
