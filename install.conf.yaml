@@ -9,10 +9,6 @@
 - link:
     ~/.tmux.conf:
       path: shell/tmux.conf
-    ~/.vimrc:
-      path: vim/vimrc
-    ~/.vim:
-      path: vim/vim
     ~/.config/nvim:
       path: nvim
     ~/.config/kitty:
