@@ -11,6 +11,21 @@ _has() {
 # Plugins
 znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance}
 znap source ohmyzsh/ohmyzsh plugins/{per-directory-history,git}
+znap source marlonrichert/zcolors
+znap source marlonrichert/zsh-autocomplete
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-syntax-highlighting
+znap source jessarcher/zsh-artisan
+znap source unixorn/fzf-zsh-plugin
+
+# Extra init code needed for zcolors.
+znap eval zcolors "zcolors ${(q)LS_COLORS}"
+
+# autocomplete settings
+zstyle ':autocomplete:tab:*' widget-style menu-select
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' min-input 2
+
 # ZSH Theme
 znap prompt ohmyzsh/ohmyzsh robbyrussell
 
