@@ -7,6 +7,9 @@
 - clean: ['~', '.config/']
 
 - link:
+    ~/.zshrc:
+      force: true
+      path: shell/zshrc
     ~/.tmux.conf:
       path: shell/tmux.conf
     ~/.config/nvim:
@@ -15,12 +18,11 @@
       path: kitty
 
 - shell:
-  # install ohmyzsh
-  -
-    command: 'if [ ! -d ~/.oh-my-zsh ]; then sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi'
+  # install znap (zsh plugin manager)
+  - command: 'if [ ! -d ~/.znap ]; then sh -c "$(git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.znap)"; fi'
     stdin: false
     stdout: true
-    description: "Install ohmyzsh:"
+    description: "Installing znap (zsh-snap):"
     quiet: false
 
   # install vim plug for nvim
@@ -32,9 +34,3 @@
     stdout: true
     description: "Install nvim plugins! Hit enter once if stuck:"
     quiet: false
-
-# do this last to override generated .zshrc
-- link:
-    ~/.zshrc:
-      force: true
-      path: shell/zshrc
