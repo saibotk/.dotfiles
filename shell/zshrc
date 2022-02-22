@@ -26,8 +26,14 @@ zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' min-input 2
 
-# ZSH Theme
-znap prompt ohmyzsh/ohmyzsh robbyrussell
+# ZSH prompt
+if _has starship;
+then
+    znap eval starship 'starship init zsh --print-full-init'
+else
+    echo "You should try installing the starship prompt 🚀"
+    znap prompt ohmyzsh/ohmyzsh robbyrussell
+fi
 
 # aliases
 alias ll='ls -l'
