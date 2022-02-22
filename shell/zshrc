@@ -1,6 +1,6 @@
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir ~/.znap
-source ~/.znap/znap.zsh
+source ~/.znap/znap/znap.zsh
 
 # Helper Functions
 # Returns whether the given command is executable or aliased.

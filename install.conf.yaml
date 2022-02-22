@@ -19,7 +19,7 @@
 
 - shell:
   # install znap (zsh plugin manager)
-  - command: 'if [ ! -d ~/.znap ]; then sh -c "$(git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.znap)"; fi'
+  - command: 'if [ ! -d ~/.znap/znap ]; then sh -c "$(git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.znap/znap)"; fi'
     stdin: false
     stdout: true
     description: "Installing znap (zsh-snap):"
