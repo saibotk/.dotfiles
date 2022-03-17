@@ -40,6 +40,8 @@ alias ll='ls -l'
 alias la='ls -la'
 alias :q='exit'
 alias fresh="source ~/.zshrc"
+alias yarn="firejail yarn"
+alias npm="firejail npm"
 
 # localcommands
 if [ -f ~/.dotfiles/shell/localcommands ]
