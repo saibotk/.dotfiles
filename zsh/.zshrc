@@ -47,15 +47,5 @@ then
 	source $DOTFILES/zsh/localcommands
 fi
 
-# Tmuxinator autocomplete
-if [ -f ~/.bin/tmuxinator.zsh ]; then
-    source ~/.bin/tmuxinator.zsh
-fi
-
 # Set nvim as default editor
 export EDITOR='nvim'
-
-if _has ruby;
-then
-    export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-fi
