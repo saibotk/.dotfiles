@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Load common config environment variables
-source ./config.env
+# Path to your dotfiles.
+export DOTFILES=$HOME/.dotfiles
 
 echo "Setting up your system..."
 echo "Your dotfiles path: $DOTFILES"

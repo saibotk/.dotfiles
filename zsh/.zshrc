@@ -1,5 +1,5 @@
-# Load common config environment variables
-source config.env
+# Path to your dotfiles.
+export DOTFILES=$HOME/.dotfiles
 
 # Load extra files
 source $DOTFILES/zsh/aliases.zsh
