@@ -24,10 +24,6 @@ ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
-# kitty
-rm -rf $HOME/.config/kitty
-ln -s $DOTFILES/kitty $HOME/.config/kitty
-
 # NVIM config:
 # Install vim-plug for nvim
 if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
