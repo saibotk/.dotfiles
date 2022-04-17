@@ -1,18 +1,18 @@
 # Load common config environment variables
 source config.env
 
-# Load aliases
+# Load extra files
 source $DOTFILES/zsh/aliases.zsh
+source $DOTFILES/zsh/path.zsh
+
+# Load macos specific configs
+if [[ $OSTYPE == 'darwin'* ]]; then
+  source $DOTFILES/macos/path.zsh
+fi
 
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
-
-# Helper Functions
-# Returns whether the given command is executable or aliased.
-_has() {
-	return $( whence $1 >/dev/null )
-}
 
 # autocomplete settings
 zstyle ':autocomplete:tab:*' widget-style menu-select
@@ -46,6 +46,3 @@ if [ -f $DOTFILES/zsh/localcommands ]
 then
 	source $DOTFILES/zsh/localcommands
 fi
-
-# Set nvim as default editor
-export EDITOR='nvim'
