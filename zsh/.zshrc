@@ -1,15 +1,6 @@
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
-# Load extra files
-source $DOTFILES/zsh/aliases.zsh
-source $DOTFILES/zsh/path.zsh
-
-# Load macos specific configs
-if [[ $OSTYPE == 'darwin'* ]]; then
-  source $DOTFILES/macos/path.zsh
-fi
-
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
@@ -38,6 +29,23 @@ znap source unixorn/fzf-zsh-plugin
 # Extra init code needed for zcolors.
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
+# Load extra files
+source $DOTFILES/zsh/path.zsh
+
+# Load macos specific configs
+if [[ $OSTYPE == 'darwin'* ]]; then
+  source $DOTFILES/macos/path.zsh
+fi
+
+# Load aliases
+source $DOTFILES/zsh/aliases.zsh
+
+# localcommands
+if [ -f $DOTFILES/zsh/localcommands ]
+then
+	source $DOTFILES/zsh/localcommands
+fi
+
 # ZSH prompt
 if _has starship;
 then
@@ -45,10 +53,4 @@ then
 else
     echo "You should try installing the starship prompt 🚀"
     znap prompt ohmyzsh/ohmyzsh robbyrussell
-fi
-
-# localcommands
-if [ -f $DOTFILES/zsh/localcommands ]
-then
-	source $DOTFILES/zsh/localcommands
 fi
