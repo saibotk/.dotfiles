@@ -14,6 +14,12 @@ fi
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
 
+# Helper Functions
+# Returns whether the given command is executable or aliased.
+_has() {
+	return $( whence $1 >/dev/null )
+}
+
 # autocomplete settings
 zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' fzf-completion yes
