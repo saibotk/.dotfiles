@@ -1,3 +1,6 @@
+# Load common config environment variables
+source config.env
+
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
@@ -44,9 +47,9 @@ alias yarn="firejail yarn"
 alias npm="firejail npm"
 
 # localcommands
-if [ -f ~/.dotfiles/shell/localcommands ]
+if [ -f $DOTFILES/zsh/localcommands ]
 then
-	source ~/.dotfiles/shell/localcommands
+	source $DOTFILES/zsh/localcommands
 fi
 
 # Tmuxinator autocomplete
@@ -54,7 +57,7 @@ if [ -f ~/.bin/tmuxinator.zsh ]; then
     source ~/.bin/tmuxinator.zsh
 fi
 
-# Set vim as default editor
+# Set nvim as default editor
 export EDITOR='nvim'
 
 if _has ruby;
