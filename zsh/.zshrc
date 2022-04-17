@@ -1,6 +1,9 @@
 # Load common config environment variables
 source config.env
 
+# Load aliases
+source $DOTFILES/zsh/aliases.zsh
+
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
@@ -10,6 +13,11 @@ source ~/.znap/znap/znap.zsh
 _has() {
 	return $( whence $1 >/dev/null )
 }
+
+# autocomplete settings
+zstyle ':autocomplete:tab:*' widget-style menu-select
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' min-input 2
 
 # Plugins
 znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance}
@@ -24,11 +32,6 @@ znap source unixorn/fzf-zsh-plugin
 # Extra init code needed for zcolors.
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
-# autocomplete settings
-zstyle ':autocomplete:tab:*' widget-style menu-select
-zstyle ':autocomplete:*' fzf-completion yes
-zstyle ':autocomplete:*' min-input 2
-
 # ZSH prompt
 if _has starship;
 then
@@ -37,14 +40,6 @@ else
     echo "You should try installing the starship prompt 🚀"
     znap prompt ohmyzsh/ohmyzsh robbyrussell
 fi
-
-# aliases
-alias ll='ls -l'
-alias la='ls -la'
-alias :q='exit'
-alias fresh="source ~/.zshrc"
-alias yarn="firejail yarn"
-alias npm="firejail npm"
 
 # localcommands
 if [ -f $DOTFILES/zsh/localcommands ]
