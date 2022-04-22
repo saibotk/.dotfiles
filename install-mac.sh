@@ -30,6 +30,9 @@ softwareupdate --install-rosetta
 
 brew bundle --file $DOTFILES/macos/Brewfile
 
+# Install pynvim for nvim
+pip3 install --user pynvim
+
 # Install PHP extensions with PECL
 pecl install imagick redis
 
