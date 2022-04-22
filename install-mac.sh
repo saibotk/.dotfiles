@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Load common config environment variables
-source config.env
+# Path to your dotfiles.
+export DOTFILES=$HOME/.dotfiles
 
 # Paths to openssl to build pecl extensions (swoole)
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
