@@ -30,6 +30,10 @@ softwareupdate --install-rosetta
 
 brew bundle --file $DOTFILES/macos/Brewfile
 
+# Fix for https://github.com/Homebrew/homebrew-core/issues/74447
+# gnupg is not really needed but marked as a dependency for pass
+brew unlink gnupg
+
 # Install pynvim for nvim
 pip3 install --user pynvim
 

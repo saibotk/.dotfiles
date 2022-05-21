@@ -12,6 +12,7 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
 brew 'gh'
 brew 'git'
+brew 'gnupg' # Dependency for pass etc but slightly conflicts with gpg-suite see https://github.com/Homebrew/homebrew-core/issues/74447
 brew 'grep'
 brew 'httpie'
 brew 'mackup'
@@ -20,6 +21,7 @@ brew "openjdk"
 brew 'openvpn'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
+brew 'pass'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew 'pcre2' # Needed to build swoole
