@@ -9,6 +9,7 @@ tap 'nicoverbruggen/homebrew-cask'
 brew 'awscli'
 brew 'bash'
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'graphviz'
 brew 'ffmpeg'
 brew 'gh'
 brew 'git'
@@ -87,6 +88,7 @@ cask 'gitkraken'
 cask 'basecamp'
 cask 'setapp'
 cask 'spotify'
+cask 'mactex'
 
 # Fonts
 cask 'font-fira-code'
