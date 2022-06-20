@@ -48,6 +48,7 @@ brew 'node'
 brew 'redis'
 brew 'yarn'
 brew 'pnpm'
+brew 'ansible'
 
 # Apps
 cask '1password'
