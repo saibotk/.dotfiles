@@ -91,6 +91,7 @@ cask 'setapp'
 cask 'spotify'
 cask 'mactex'
 cask 'android-studio'
+cask 'tunnelblick'
 
 # Fonts
 cask 'font-fira-code'
@@ -108,3 +109,4 @@ mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Speedtest', id: 1153157709
 mas 'harvest', id: 506189836
+mas 'Microsoft Remote Desktop', id: 1295203466
