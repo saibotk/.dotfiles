@@ -49,6 +49,8 @@ brew 'redis'
 brew 'yarn'
 brew 'pnpm'
 brew 'ansible'
+brew 'android-platform-tools'
+brew 'jq'
 
 # Apps
 cask '1password'
