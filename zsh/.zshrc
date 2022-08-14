@@ -29,13 +29,13 @@ znap source unixorn/fzf-zsh-plugin
 # Extra init code needed for zcolors.
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
-# Load extra files
-source $DOTFILES/zsh/path.zsh
-
 # Load macos specific configs
 if [[ $OSTYPE == 'darwin'* ]]; then
   source $DOTFILES/macos/path.zsh
 fi
+
+# Load extra files
+source $DOTFILES/zsh/path.zsh
 
 # Load aliases
 source $DOTFILES/zsh/aliases.zsh
