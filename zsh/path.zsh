@@ -6,3 +6,6 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 # Set nvim as default editor
 export EDITOR='nvim'
+
+# Fix git log color sequences
+export LESS='-R'
