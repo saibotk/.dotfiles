@@ -1,0 +1,28 @@
+#!/bin/sh
+
+echo "\n > Upgrading brew packages...\n"
+brew update
+brew upgrade
+# Fixes gnupg link conflicts with GPGSuite
+brew unlink gnupg
+
+echo "\n > Upgrading pecl packages...\n"
+# Paths to openssl to build pecl extensions (swoole)
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
+
+pecl upgrade
+
+echo "\n > Upgrading global composer packages...\n"
+composer global upgrade
+
+echo "\n > Upgrading nvim packages...\n"
+nvim +PlugUpgrade +PlugUpdate +qall
+
+echo "\n > Upgrading znap plugins...\n"
+znap-update
+echo "\n"
+
+echo "\n > Done 🚀 enjoy your day!\n"
