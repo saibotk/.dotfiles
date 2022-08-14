@@ -38,11 +38,10 @@ alias seed="php artisan db:seed"
 alias serve="php artisan serve"
 
 # PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias cfresh="rm -rf vendor/ && composer i"
 
 # JS
-alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
+alias nfresh="rm -rf node_modules/ && pnpm install"
 
 # Git
 alias gst="git status"
@@ -53,7 +52,7 @@ alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
 alias diff="git diff"
 alias force="git push --force"
-alias nuke="git clean -df && git reset --hard"
+alias nuke="git clean -dxf && git reset --hard"
 alias pop="git stash pop"
 alias pull="git pull"
 alias push="git push"
