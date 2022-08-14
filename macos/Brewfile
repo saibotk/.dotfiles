@@ -49,11 +49,11 @@ brew 'redis'
 brew 'yarn'
 brew 'pnpm'
 brew 'ansible'
-brew 'android-platform-tools'
 brew 'jq'
 
 # Apps
 cask '1password'
+cask '1password-cli'
 cask 'alfred'
 cask 'around'
 cask 'discord'
@@ -93,6 +93,7 @@ cask 'setapp'
 cask 'spotify'
 cask 'mactex'
 cask 'android-studio'
+cask 'android-platform-tools'
 cask 'tunnelblick'
 
 # Fonts
@@ -112,3 +113,4 @@ mas 'Numbers', id: 409203825
 mas 'Speedtest', id: 1153157709
 mas 'harvest', id: 506189836
 mas 'Microsoft Remote Desktop', id: 1295203466
+mas 'Strongbox - KeePass & PwSafe', id: 897283731
