@@ -1,0 +1,4 @@
+#!/bin/zsh
+source $DOTFILES/zsh/.zshrc
+
+znap pull
