@@ -95,6 +95,7 @@ cask 'mactex'
 cask 'android-studio'
 cask 'android-platform-tools'
 cask 'tunnelblick'
+cask 'raycast'
 
 # Fonts
 cask 'font-fira-code'
