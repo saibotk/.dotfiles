@@ -7,6 +7,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
     alias ls="/opt/homebrew/opt/coreutils/libexec/gnubin/ls"
     alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
     alias composer="php -d memory_limit=-1 /opt/homebrew/bin/composer"
+    alias sup="$DOTFILES/macos/bin/pkg-update"
 fi
 
 # Linux specifics
