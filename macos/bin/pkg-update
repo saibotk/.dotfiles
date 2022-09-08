@@ -18,6 +18,9 @@ pecl upgrade
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
 
+echo "\n > Running valet install...\n"
+valet install
+
 echo "\n > Upgrading nvim packages...\n"
 nvim +PlugUpgrade +PlugUpdate +qall
 
