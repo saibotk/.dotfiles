@@ -50,6 +50,7 @@ brew 'yarn'
 brew 'pnpm'
 brew 'ansible'
 brew 'jq'
+brew 'scrcpy'
 
 # Apps
 cask '1password'
