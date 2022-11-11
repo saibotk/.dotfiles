@@ -51,6 +51,8 @@ brew 'pnpm'
 brew 'ansible'
 brew 'jq'
 brew 'scrcpy'
+brew 'go'
+brew 'deno'
 
 # Apps
 cask '1password'
