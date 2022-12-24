@@ -100,6 +100,8 @@ cask 'android-studio'
 cask 'android-platform-tools'
 cask 'tunnelblick'
 cask 'raycast'
+cask 'eclipse-java'
+cask 'bitwarden'
 
 # Fonts
 cask 'font-fira-code'
