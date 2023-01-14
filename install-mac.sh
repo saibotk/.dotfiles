@@ -61,6 +61,9 @@ mkdir -p $HOME/git/private
 # Symlink the Mackup config file to the home directory
 ln -s $DOTFILES/macos/.mackup.cfg $HOME/.mackup.cfg
 
+# Activate asimov to automatically exclude node_modules from TM backup
+sudo brew services start asimov
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/macos/.macos
 
