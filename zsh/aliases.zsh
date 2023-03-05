@@ -15,7 +15,7 @@ if [[ $OSTYPE == 'linux'* ]]; then
     alias clip="xclip -sel clip"
     alias copyssh="cat $HOME/.ssh/id_rsa.pub | clip"
 
-    alias pnpm="firejail pnpm"
+    alias pnpm="firejail --profile=npm pnpm"
     alias yarn="firejail yarn"
     alias npm="firejail npm"
 fi
