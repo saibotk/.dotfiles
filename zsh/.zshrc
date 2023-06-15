@@ -5,12 +5,6 @@ export DOTFILES=$HOME/.dotfiles
 zstyle ':znap:*' repos-dir ~/.znap
 source ~/.znap/znap/znap.zsh
 
-# Helper Functions
-# Returns whether the given command is executable or aliased.
-_has() {
-	return $( whence $1 >/dev/null )
-}
-
 # autocomplete settings
 zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' fzf-completion yes
@@ -47,10 +41,4 @@ then
 fi
 
 # ZSH prompt
-if _has starship;
-then
-    znap eval starship 'starship init zsh --print-full-init'
-else
-    echo "You should try installing the starship prompt 🚀"
-    znap prompt ohmyzsh/ohmyzsh robbyrussell
-fi
+znap eval starship 'starship init zsh --print-full-init'
