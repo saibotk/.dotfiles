@@ -3,7 +3,6 @@
 -- syntax
 vim.cmd [[
   let mapleader = " "
-  set shortmess+=c
   colorscheme sonokai
 ]]
 
@@ -12,10 +11,11 @@ vim.opt.termguicolors=true
 vim.g.do_filetype_lua = 1
 
 -- random settings
-vim.opt.number = true
-vim.opt.rnu = true
-vim.opt.clipboard = 'unnamed'
-vim.opt.mouse = 'nvi'
+vim.opt.shortmess:append('c')
+vim.opt.number=true
+vim.opt.rnu=true
+vim.opt.clipboard='unnamed'
+vim.opt.mouse='nvi'
 
 vim.opt.visualbell = true
 vim.opt.virtualedit = 'block'
