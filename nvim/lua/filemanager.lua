@@ -56,4 +56,5 @@ nvimtree.setup {
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 -- KEYMAPS
-vim.keymap.set('n', '<leader>e', nvimtree.toggle)
+local api = require("nvim-tree.api")
+vim.keymap.set('n', '<leader>e', api.tree.toggle)
