@@ -2,8 +2,8 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Load zsh-snap (znap) plugin manager
-zstyle ':znap:*' repos-dir ~/.znap
-source ~/.znap/znap/znap.zsh
+zstyle ':znap:*' repos-dir $HOME/.znap
+source $HOME/.znap/znap/znap.zsh
 
 # shell options
 setopt correct                # Auto correct mistakes
