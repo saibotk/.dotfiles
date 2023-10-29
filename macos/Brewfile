@@ -16,7 +16,6 @@ brew 'gnupg' # Dependency for pass etc but slightly conflicts with gpg-suite see
 brew 'grep'
 brew 'httpie'
 brew 'mackup'
-brew 'mailhog'
 brew "openjdk"
 brew 'openvpn'
 brew 'mas' # Mac App Store manager
@@ -44,10 +43,8 @@ brew 'php@8.0'
 brew 'php@7.4'
 brew 'composer'
 brew 'imagemagick'
-brew 'meilisearch'
 brew 'nginx'
 brew 'node'
-brew 'redis'
 brew 'yarn'
 brew 'pnpm'
 brew 'ansible'
@@ -72,7 +69,6 @@ cask 'chromium', args: { no_quarantine: true }
 cask 'element'
 cask 'figma'
 cask 'firefox'
-cask 'github'
 cask 'gpg-suite'
 cask 'imageoptim'
 cask 'insomnia'
@@ -101,10 +97,9 @@ cask 'android-studio'
 cask 'android-platform-tools'
 cask 'tunnelblick'
 cask 'raycast'
-cask 'eclipse-java'
-cask 'bitwarden'
 cask 'phpstorm'
 cask 'jetbrains-toolbox'
+cask 'arq'
 
 # Fonts
 cask 'font-fira-code'
@@ -123,7 +118,5 @@ cask 'font-reenie-beanie'
 # Mac App Store
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
-mas 'Speedtest', id: 1153157709
-mas 'harvest', id: 506189836
 mas 'Microsoft Remote Desktop', id: 1295203466
 mas 'Strongbox - KeePass & PwSafe', id: 897283731
