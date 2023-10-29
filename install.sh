@@ -6,9 +6,9 @@ export DOTFILES=$HOME/.dotfiles
 echo "Setting up your system..."
 echo "Your dotfiles path: $DOTFILES"
 
-if [ ! -d ~/.znap/znap ]; then 
+if [ ! -d $HOME/.znap/znap ]; then 
   echo "Installing znap..."
-  sh -c "$(git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.znap/znap)"
+  sh -c "$(git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.znap/znap)"
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles

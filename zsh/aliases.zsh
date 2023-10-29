@@ -4,9 +4,9 @@
 if [[ $OSTYPE == 'darwin'* ]]; then
     alias clip="pbcopy"
     alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
-    alias ls="/opt/homebrew/opt/coreutils/libexec/gnubin/ls"
+    alias ls="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin/ls"
     alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-    alias composer="php -d memory_limit=-1 /opt/homebrew/bin/composer"
+    alias composer="php -d memory_limit=-1 ${HOMEBREW_PREFIX}/bin/composer"
     alias sup="$DOTFILES/macos/bin/pkg-update"
 fi
 
