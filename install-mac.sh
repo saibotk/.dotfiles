@@ -20,7 +20,7 @@ brew update
 brew tap homebrew/bundle
 
 # Rosetta is required for microsoft teams
-softwareupdate --install-rosetta 
+softwareupdate --install-rosetta
 
 brew bundle --file ${DOTFILES}/macos/Brewfile
 
@@ -38,7 +38,7 @@ export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
 export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl@3/lib/pkgconfig"
 
 # Install PHP extensions with PECL
-yes | pecl install imagick redis
+yes | pecl install imagick igbinary msgpack redis
 
 # Symlink pcre2, so pecl can find it when installing / building (needed for swoole)
 sudo mkdir -p /usr/local/include
