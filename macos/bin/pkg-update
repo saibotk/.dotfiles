@@ -13,7 +13,7 @@ export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
 export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
 export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl@3/lib/pkgconfig"
 
-pecl upgrade
+yes | pecl upgrade
 
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
