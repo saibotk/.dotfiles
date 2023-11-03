@@ -22,6 +22,7 @@ ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
 # nvim
 rm -rf $HOME/.config/nvim
+mkdir -p $HOME/.config
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 # NVIM config:
