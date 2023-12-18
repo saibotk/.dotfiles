@@ -56,7 +56,7 @@ brew 'poppler' # PDF manipulation
 brew 'qpdf'
 brew 'rename'
 
-brew 'rust'
+brew 'rustup'
 brew 'cargo-make'
 
 # Apps
