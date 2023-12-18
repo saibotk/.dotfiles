@@ -22,13 +22,13 @@ echo "\n > Running valet install...\n"
 valet install
 
 echo "\n > Applying Valet PHP fix for segfaults...\n"
-sudo echo ";; these are an attempt to mitigate 502 errors caused by segfaults in upstream processes caused by krb5 v1.21 added in June 2023 to php's core build. Ref Issue #1433
+grep -q "LC_ALL" ${HOMEBREW_PREFIX}/etc/php/8.3/php-fpm.d/valet-fpm.conf || echo ";; these are an attempt to mitigate 502 errors caused by segfaults in upstream processes caused by krb5 v1.21 added in June 2023 to php's core build. Ref Issue #1433
 ; for gettext
 env['LC_ALL'] = C
 ; for postgres
 env['PGGSSENCMODE'] = disable
 
-" >> ${HOMEBREW_PREFIX}/etc/php/8.2/php-fpm.d/valet-fpm.conf
+" | sudo tee -a ${HOMEBREW_PREFIX}/etc/php/8.3/php-fpm.d/valet-fpm.conf
 
 echo "\n > Restarting Valet to apply patch...\n"
 valet restart
