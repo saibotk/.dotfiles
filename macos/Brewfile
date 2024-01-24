@@ -29,6 +29,7 @@ brew 'openssl' # Needed to build swoole
 brew 'starship' # fancy shell prompt
 brew 'asimov' # Exclude node_modules etc from TM backup
 brew 'git-absorb' # amazing tool for better git fixup
+brew 'git-town'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
