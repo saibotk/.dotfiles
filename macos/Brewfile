@@ -58,6 +58,7 @@ brew 'deno'
 brew 'poppler' # PDF manipulation
 brew 'qpdf'
 brew 'rename'
+brew 'git-delta'
 
 brew 'rustup'
 brew 'cargo-make'
