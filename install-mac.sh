@@ -28,9 +28,6 @@ brew bundle --file ${DOTFILES}/macos/Brewfile
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
-# Install pynvim for nvim
-pip3 install --user pynvim
-
 # Paths to openssl to build pecl extensions (swoole)
 export PATH="${HOMEBREW_PREFIX}/opt/openssl@3/bin:$PATH"
 export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
