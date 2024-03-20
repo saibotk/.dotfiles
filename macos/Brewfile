@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'oven-sh/bun'
+tap 'withgraphite/tap'
 
 # Binaries
 brew 'awscli'
@@ -29,7 +30,8 @@ brew 'openssl' # Needed to build swoole
 brew 'starship' # fancy shell prompt
 brew 'asimov' # Exclude node_modules etc from TM backup
 brew 'git-absorb' # amazing tool for better git fixup
-brew 'git-town'
+brew 'git-town' # Simple git stacking tool
+brew 'graphite' # Advanced stacking tool with web app
 
 # Spatie Medialibrary
 brew 'jpegoptim'
