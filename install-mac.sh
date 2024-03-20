@@ -58,9 +58,6 @@ mkdir -p $HOME/git/clickbar
 mkdir -p $HOME/git/konaktiva
 mkdir -p $HOME/git/private
 
-# Symlink the Mackup config file to the home directory
-ln -s ${DOTFILES}/macos/.mackup.cfg $HOME/.mackup.cfg
-
 # Activate asimov to automatically exclude node_modules from TM backup
 sudo brew services start asimov
 

@@ -17,7 +17,6 @@ brew 'git'
 brew 'gnupg' # Dependency for pass etc but slightly conflicts with gpg-suite see https://github.com/Homebrew/homebrew-core/issues/74447
 brew 'grep'
 brew 'httpie'
-brew 'mackup'
 brew "openjdk"
 brew 'openvpn'
 brew 'mas' # Mac App Store manager
