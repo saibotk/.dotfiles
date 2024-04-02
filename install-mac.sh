@@ -42,6 +42,16 @@ mkdir -p $HOME/git/private
 # Activate asimov to automatically exclude node_modules from TM backup
 sudo brew services start asimov
 
+read -p "Enter a name for your MacBook, typically 'MacBook YOURNAME' [default: MacBook cb.]: " computername
+computername=${computername:-MacBook cb.}
+echo "Setting hostname to $computername"
+
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "$computername"
+sudo scutil --set HostName "$computername"
+sudo scutil --set LocalHostName "$computername"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computername"
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos
 
