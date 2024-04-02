@@ -39,6 +39,10 @@ mkdir -p $HOME/git/clickbar
 mkdir -p $HOME/git/konaktiva
 mkdir -p $HOME/git/private
 
+# Mark directories for valet
+valet park $HOME/git/clickbar
+valet park $HOME/git/private
+
 # Activate asimov to automatically exclude node_modules from TM backup
 sudo brew services start asimov
 
