@@ -1,0 +1,48 @@
+[user]
+        email = git@saibotk.de
+        name = Saibotk
+        signingKey = D6D71F8629D98610A9EED6917688BE2AC0E0113D
+[gpg]
+        program = gpg
+[commit]
+        gpgSign = true
+[tag]
+        forceSignAnnotated = true
+        sort = taggerdate
+[diff]
+        algorithm = histogram
+        submodule = log
+[alias]
+        append = town append
+        diff-parent = town diff-parent
+        hack = town hack
+        kill = town kill
+        prepend = town prepend
+        propose = town propose
+        rename-branch = town rename-branch
+        repo = town repo
+        ship = town ship
+        sync = town sync
+        pr = town
+[git-town]
+        sync-feature-strategy = rebase
+[blame]
+        ignoreRevsFile = .git-blame-ignore-revs
+[rerere]
+        enabled = true
+[merge]
+        conflictstyle = zdiff3
+[rebase]
+        autosquash = true
+[core]
+        pager = delta
+[submodule]
+        recurse = true
+[status]
+        submoduleSummary = true
+[branch]
+        sort = -committerdate
+[url "git@github.com:"]
+        insteadOf = "https://github.com/"
+[push]
+        autoSetupRemote = true

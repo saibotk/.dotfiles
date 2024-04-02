@@ -16,6 +16,17 @@ rm -rf $HOME/.zshrc
 ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
 
 # Relink other software configs
+
+# git
+# We only include our config here to allow other tools to still modify the gitconfig locally with user specific paths etc.
+# E.g. znap adds maintenance entries there.
+echo """
+
+[include]
+path = ~/.dotfiles/.gitconfig
+
+""" >> $HOME/.gitconfig
+
 # tmux
 rm -rf $HOME/.tmux.conf
 ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
