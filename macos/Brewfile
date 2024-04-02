@@ -18,6 +18,7 @@ brew 'gnupg' # Dependency for pass etc but slightly conflicts with gpg-suite see
 brew 'grep'
 brew 'httpie'
 brew "openjdk"
+brew 'openjdk@17'
 brew 'openvpn'
 brew 'mas' # Mac App Store manager
 brew 'neovim'
@@ -109,6 +110,7 @@ cask 'raycast'
 cask 'phpstorm'
 cask 'jetbrains-toolbox'
 cask 'arq'
+cask 'prismlauncher'
 
 # Fonts
 cask 'font-fira-code'
