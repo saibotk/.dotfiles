@@ -28,7 +28,7 @@ brew 'starship' # fancy shell prompt
 brew 'asimov' # Exclude node_modules etc from TM backup
 brew 'git-absorb' # amazing tool for better git fixup
 brew 'git-town' # Simple git stacking tool
-brew 'graphite' # Advanced stacking tool with web app
+brew 'withgraphite/tap/graphite' # Advanced stacking tool with web app
 brew 'ansible'
 brew 'ansible-lint'
 brew 'jq'
