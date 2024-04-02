@@ -13,7 +13,7 @@ echo "\n > Running valet install...\n"
 valet install
 
 echo "\n > Upgrading nvim packages...\n"
-nvim +PlugUpgrade +PlugUpdate +qall
+nvim +PlugUpgrade +PlugUpdate +TSUpdate +MasonUpdate +qall
 
 echo "\n > Upgrading znap plugins...\n"
 znap-update
