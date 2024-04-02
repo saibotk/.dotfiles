@@ -20,12 +20,14 @@ ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
 # git
 # We only include our config here to allow other tools to still modify the gitconfig locally with user specific paths etc.
 # E.g. znap adds maintenance entries there.
+if ! grep -q "path = $DOTFILES/.gitconfig" ~/.gitconfig; then
+echo "Adding gitconfig include statement to ~/.gitconfig"
+
 echo """
-
 [include]
-path = ~/.dotfiles/.gitconfig
-
+path = $DOTFILES/.gitconfig
 """ >> $HOME/.gitconfig
+fi
 
 # tmux
 rm -rf $HOME/.tmux.conf
@@ -44,6 +46,6 @@ if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
 fi
 
 # Install + update all nvim plugins
-nvim +PlugUpgrade +PlugUpdate +qall
+# nvim +PlugUpgrade +PlugUpdate +qall
 
 echo "Done! All set up, ready to be used!"
