@@ -6,15 +6,6 @@ brew upgrade
 # Fixes gnupg link conflicts with GPGSuite
 brew unlink gnupg
 
-echo "\n > Upgrading pecl packages...\n"
-# Paths to openssl to build pecl extensions (swoole)
-export PATH="${HOMEBREW_PREFIX}/opt/openssl@3/bin:$PATH"
-export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
-export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
-export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl@3/lib/pkgconfig"
-
-yes | pecl upgrade
-
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
 

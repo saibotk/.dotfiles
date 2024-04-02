@@ -28,22 +28,6 @@ brew bundle --file ${DOTFILES}/macos/Brewfile
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
-# Paths to openssl to build pecl extensions (swoole)
-export PATH="${HOMEBREW_PREFIX}/opt/openssl@3/bin:$PATH"
-export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
-export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
-export PKG_CONFIG_PATH="${HOMEBREW_PREFIX}/opt/openssl@3/lib/pkgconfig"
-
-# Install PHP extensions with PECL
-yes | pecl install imagick igbinary msgpack redis
-
-# Symlink pcre2, so pecl can find it when installing / building (needed for swoole)
-sudo mkdir -p /usr/local/include
-sudo ln -s ${HOMEBREW_PREFIX}/include/pcre2.h /usr/local/include/
-
-# Install swoole with all features
-yes | pecl install swoole
-
 # Install global Composer packages
 ${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
 

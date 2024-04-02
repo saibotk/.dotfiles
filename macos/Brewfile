@@ -4,6 +4,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'oven-sh/bun'
 tap 'withgraphite/tap'
+tap 'shivammathur/extensions'
 
 # Binaries
 brew 'awscli'
@@ -36,6 +37,8 @@ brew 'poppler' # PDF manipulation
 brew 'qpdf'
 brew 'rename'
 brew 'git-delta'
+brew 'imagemagick'
+brew 'nginx'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -45,12 +48,23 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
-brew 'php'
+brew 'php@8.3'
+brew 'shivammathur/extensions/xdebug@8.3'
+brew 'shivammathur/extensions/redis@8.3'
+brew 'shivammathur/extensions/imagick@8.3'
+brew 'shivammathur/extensions/swoole@8.3'
 brew 'php@8.2'
+brew 'shivammathur/extensions/xdebug@8.2'
+brew 'shivammathur/extensions/redis@8.2'
+brew 'shivammathur/extensions/imagick@8.2'
+brew 'shivammathur/extensions/swoole@8.2'
 brew 'php@8.1'
+brew 'shivammathur/extensions/xdebug@8.1'
+brew 'shivammathur/extensions/redis@8.1'
+brew 'shivammathur/extensions/imagick@8.1'
+brew 'shivammathur/extensions/swoole@8.1'
+
 brew 'composer'
-brew 'imagemagick'
-brew 'nginx'
 brew 'node'
 brew 'deno'
 brew 'bun'
