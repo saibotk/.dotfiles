@@ -1,5 +1,4 @@
 # Taps
-tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
@@ -24,13 +23,19 @@ brew 'neovim'
 brew 'pass'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
-brew 'pcre2' # Needed to build swoole
-brew 'openssl' # Needed to build swoole
 brew 'starship' # fancy shell prompt
 brew 'asimov' # Exclude node_modules etc from TM backup
 brew 'git-absorb' # amazing tool for better git fixup
 brew 'git-town' # Simple git stacking tool
 brew 'graphite' # Advanced stacking tool with web app
+brew 'ansible'
+brew 'ansible-lint'
+brew 'jq'
+brew 'scrcpy'
+brew 'poppler' # PDF manipulation
+brew 'qpdf'
+brew 'rename'
+brew 'git-delta'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -47,20 +52,11 @@ brew 'composer'
 brew 'imagemagick'
 brew 'nginx'
 brew 'node'
+brew 'deno'
 brew 'bun'
 brew 'yarn'
 brew 'pnpm'
-brew 'ansible'
-brew 'ansible-lint'
-brew 'jq'
-brew 'scrcpy'
 brew 'go'
-brew 'deno'
-brew 'poppler' # PDF manipulation
-brew 'qpdf'
-brew 'rename'
-brew 'git-delta'
-
 brew 'rustup'
 brew 'cargo-make'
 
