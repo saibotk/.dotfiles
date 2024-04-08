@@ -129,6 +129,7 @@ cask 'spotify'
 cask 'mactex'
 cask 'element'
 cask 'discord'
+cask 'obs'
 
 # Fonts
 cask 'font-fira-code'
