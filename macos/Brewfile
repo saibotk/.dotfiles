@@ -33,6 +33,7 @@ brew 'rename'
 
 # Service tools
 brew 'awscli'
+brew 'b2-tools'
 brew 'gh' # GitHub CLI
 
 # Infrastructure tools
@@ -85,8 +86,7 @@ brew 'composer'
 brew 'node'
 brew 'deno'
 brew 'oven-sh/bun/bun'
-brew 'yarn'
-brew 'pnpm'
+brew 'corepack'
 brew 'go'
 brew 'rustup'
 brew 'cargo-make'
