@@ -130,6 +130,7 @@ cask 'mactex'
 cask 'element'
 cask 'discord'
 cask 'obs'
+cask 'obsidian'
 
 # Fonts
 cask 'font-fira-code'
