@@ -3,6 +3,8 @@ export DOTFILES=$HOME/.dotfiles
 
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir $HOME/.znap
+# Disable git maintenance to prevent background git ssh requests
+zstyle ':znap:*:*' git-maintenance off
 source $HOME/.znap/znap/znap.zsh
 
 # shell options
