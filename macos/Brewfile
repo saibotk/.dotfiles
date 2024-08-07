@@ -50,6 +50,7 @@ brew 'withgraphite/tap/graphite' # Advanced stacking tool with web app
 brew 'starship' # fancy shell prompt
 brew 'pass' # GPG-based PW manager
 brew 'openjdk@17' # older jdk for minecraft
+brew 'wakeonlan' # waking bob
 
 # Nvim & various dependencies
 brew 'neovim'
