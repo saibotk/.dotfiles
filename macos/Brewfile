@@ -83,6 +83,7 @@ brew 'shivammathur/extensions/redis@8.1'
 brew 'shivammathur/extensions/imagick@8.1'
 brew 'shivammathur/extensions/swoole@8.1'
 
+brew 'uv' # python dependency manager
 brew 'composer'
 brew 'node'
 brew 'deno'
