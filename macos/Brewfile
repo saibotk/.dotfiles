@@ -37,8 +37,10 @@ brew 'b2-tools'
 brew 'gh' # GitHub CLI
 
 # Infrastructure tools
+brew 'just' # Better than makefiles
 brew 'ansible'
 brew 'ansible-lint'
+brew 'dive' # Inspect container images
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
