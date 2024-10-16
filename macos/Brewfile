@@ -30,6 +30,7 @@ brew 'scrcpy' # View screen of an android device
 brew 'poppler' # PDF manipulation
 brew 'qpdf' # PDF manipulation
 brew 'rename'
+brew 'jordanbaird-ice'
 
 # Service tools
 brew 'awscli'
