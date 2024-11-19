@@ -42,6 +42,7 @@ brew 'just' # Better than makefiles
 brew 'ansible'
 brew 'ansible-lint'
 brew 'dive' # Inspect container images
+brew 'tailscale'
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
