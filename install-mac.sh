@@ -38,7 +38,7 @@ ${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet t
 $HOME/.composer/vendor/bin/valet install
 
 # Set Valet TLD to .localhost for secure context even in HTTP
-valet -n tld localhost
+yes | valet tld localhost
 
 # Create dev directories
 mkdir -p $HOME/git/clickbar

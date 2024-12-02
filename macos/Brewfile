@@ -72,6 +72,10 @@ brew 'shivammathur/extensions/xdebug@8.2'
 brew 'shivammathur/extensions/redis@8.2'
 brew 'shivammathur/extensions/imagick@8.2'
 
+# Valet requirements
+brew 'nginx'
+brew 'dnsmasq'
+
 # Runtimes & package managers
 brew 'composer'
 brew 'uv' # python dependency manager
