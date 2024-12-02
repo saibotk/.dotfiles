@@ -58,11 +58,8 @@ sudo scutil --set ComputerName "$computername"
 sudo scutil --set HostName "$computername"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computername"
 
-# Call the general install script to setup zsh etc.
-source install.sh
-
-echo "> FINISHED 🏁 The setup will now set some macOS preferences and exit afterwards."
-read -p "Press enter to continue"
-
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos
+
+# Call the general install script to setup zsh etc.
+source install.sh
