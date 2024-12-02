@@ -28,26 +28,23 @@ brew bundle --file ${DOTFILES}/macos/Brewfile
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
-# Activate asimov to automatically exclude node_modules from TM backup
-sudo brew services start asimov
-
 # Enable corepack
 corepack enable
 
-# Herd setup
-herd -n tld localhost
+# Install global Composer packages
+${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
 
-# Create a Sites directory
+# Set Valet TLD to .localhost for secure context even in HTTP
+valet -n tld localhost
+
+# Create dev directories
 mkdir -p $HOME/git/clickbar
 mkdir -p $HOME/git/konaktiva
 mkdir -p $HOME/git/private
 
-# Mark directories for herd
-herd park $HOME/git/clickbar
-herd park $HOME/git/private
-
-# Install global Composer packages
-composer global require tightenco/takeout
+# Mark directories for Valet
+valet park $HOME/git/clickbar
+valet park $HOME/git/private
 
 read -p "Enter a name for your MacBook, typically 'MacBook YOURNAME' [default: MacBook cb.]: " computername
 computername=${computername:-MacBook cb.}
