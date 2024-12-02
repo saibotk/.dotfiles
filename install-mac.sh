@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Exit on error
+set -e
+
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
