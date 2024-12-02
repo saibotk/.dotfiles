@@ -61,7 +61,6 @@ cask 'herd' # Laravel Herd - PHP environment manager
 brew 'uv' # python dependency manager
 brew 'composer'
 brew 'node'
-brew 'corepack'
 brew 'deno'
 brew 'oven-sh/bun/bun'
 brew 'go'
