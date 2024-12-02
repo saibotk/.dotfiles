@@ -5,6 +5,9 @@ brew update
 brew upgrade
 # Fixes gnupg link conflicts with GPGSuite
 brew unlink gnupg
+# Fix corepack / node update issues
+corepack disable
+corepack enable
 
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
