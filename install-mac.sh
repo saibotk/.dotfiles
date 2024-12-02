@@ -56,7 +56,6 @@ echo "Setting hostname to $computername"
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "$computername"
 sudo scutil --set HostName "$computername"
-sudo scutil --set LocalHostName "$computername"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computername"
 
 # Call the general install script to setup zsh etc.
