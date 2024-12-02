@@ -59,7 +59,6 @@ brew 'gifsicle'
 # Runtimes & package managers
 cask 'herd' # Laravel Herd - PHP environment manager
 brew 'uv' # python dependency manager
-brew 'composer'
 brew 'node'
 brew 'deno'
 brew 'oven-sh/bun/bun'
