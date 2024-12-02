@@ -1,6 +1,4 @@
 # Taps
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'oven-sh/bun'
 tap 'withgraphite/tap'
@@ -59,7 +57,7 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Runtimes & package managers
-brew 'herd' # Laravel Herd - PHP environment manager
+cask 'herd' # Laravel Herd - PHP environment manager
 brew 'uv' # python dependency manager
 brew 'composer'
 brew 'node'
