@@ -11,38 +11,30 @@ brew 'mas' # Mac App Store manager to install appstore apps
 brew 'svn' # Needed to install fonts
 
 # Essentials
-brew 'bash'
+brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'git'
 brew 'gnupg' # Dependency for pass etc but slightly conflicts with gpg-suite see https://github.com/Homebrew/homebrew-core/issues/74447
 brew 'grep'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'imagemagick' # Needed for PHP imagick extension
-brew 'nginx' # Needed for Valet
 brew 'jq'
-brew 'graphviz'
 brew 'ffmpeg'
-brew 'httpie'
 brew "openjdk"
-brew 'openvpn'
 brew 'asimov' # Exclude node_modules etc from TM backup
 brew 'scrcpy' # View screen of an android device
-brew 'poppler' # PDF manipulation
-brew 'qpdf' # PDF manipulation
+brew 'poppler' # PDF manipulation (needed for some projects)
+brew 'qpdf' # PDF manipulation (needed for some projects)
 brew 'rename'
-brew 'jordanbaird-ice'
-
-# Service tools
-brew 'awscli'
-brew 'b2-tools'
 brew 'gh' # GitHub CLI
 
 # Infrastructure tools
+brew 'awscli'
+brew 'b2-tools'
 brew 'just' # Better than makefiles
 brew 'ansible'
 brew 'ansible-lint'
 brew 'dive' # Inspect container images
-cask 'tailscale'
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
@@ -50,11 +42,9 @@ brew 'git-absorb' # amazing tool for better git fixup
 brew 'git-town' # Simple git stacking tool
 brew 'withgraphite/tap/graphite' # Advanced stacking tool with web app
 
-# Other tools (not necessary for work)
-brew 'starship' # fancy shell prompt
-brew 'pass' # GPG-based PW manager
-brew 'openjdk@17' # older jdk for minecraft
-brew 'wakeonlan' # waking bob
+# Quicklook extensions
+cask 'qlmarkdown'
+cask 'quicklook-json'
 
 # Nvim & various dependencies
 brew 'neovim'
@@ -68,75 +58,53 @@ brew 'pngquant'
 brew 'svgo'
 brew 'gifsicle'
 
-# Development
-brew 'php@8.4'
-brew 'shivammathur/extensions/xdebug@8.4'
-brew 'shivammathur/extensions/redis@8.4'
-brew 'shivammathur/extensions/imagick@8.4'
-brew 'shivammathur/extensions/swoole@8.4'
-
-brew 'php@8.3'
-brew 'shivammathur/extensions/xdebug@8.3'
-brew 'shivammathur/extensions/redis@8.3'
-brew 'shivammathur/extensions/imagick@8.3'
-brew 'shivammathur/extensions/swoole@8.3'
-
-brew 'php@8.2'
-brew 'shivammathur/extensions/xdebug@8.2'
-brew 'shivammathur/extensions/redis@8.2'
-brew 'shivammathur/extensions/imagick@8.2'
-brew 'shivammathur/extensions/swoole@8.2'
-
+# Runtimes & package managers
+brew 'herd' # Laravel Herd - PHP environment manager
 brew 'uv' # python dependency manager
 brew 'composer'
 brew 'node'
+brew 'corepack'
 brew 'deno'
 brew 'oven-sh/bun/bun'
-brew 'corepack'
 brew 'go'
 brew 'rustup'
 brew 'cargo-make'
 
 # Apps
-cask '1password'
+cask 'setapp' # Paid App Store for Cleanshot, TablePlus etc.
+cask '1password' # Password Manager
 cask '1password-cli'
-cask 'around'
+cask 'arq' # Backup solution
 cask 'docker'
-cask 'caffeine'
 cask 'chromium', args: { no_quarantine: true }
-cask 'figma'
 cask 'firefox'
-cask 'gpg-suite'
-cask 'imageoptim'
-cask 'iterm2'
-cask 'microsoft-office'
-cask 'microsoft-teams' # requires rosetta
-cask 'notion'
-cask 'rectangle'
-cask 'ray'
+cask 'tunnelblick' # OpenVPN Application to access the company VPN
+
+# Other tools (not necessary for work)
+cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can also be used instead)
+cask 'imageoptim' # Tool to optimize images / svgs
+cask 'jordanbaird-ice' # Bartender replacement for cleaner menubar
+brew 'starship' # fancy shell prompt
+cask 'iterm2' # Better terminal
+cask 'rectangle' # Better snap to edge behavior than native
+cask 'raycast' # Better spotlight search
+
+# Office / Communication
 cask 'signal'
-cask 'dbeaver-community'
-cask 'the-unarchiver'
 cask 'tinkerwell'
+cask 'microsoft-office'
+cask 'microsoft-teams'
+cask 'notion'
+cask 'figma'
+cask 'around'
+
+# IDEs
 cask 'visual-studio-code'
-cask 'basecamp'
-cask 'setapp'
+cask 'jetbrains-toolbox'
+cask 'phpstorm'
+cask 'intellij-idea-ce'
 cask 'android-studio'
 cask 'android-platform-tools'
-cask 'tunnelblick'
-cask 'raycast'
-cask 'phpstorm'
-cask 'jetbrains-toolbox'
-cask 'arq'
-
-# Other non-work stuff
-cask 'prismlauncher'
-cask 'spotify'
-cask 'mactex'
-cask 'element'
-cask 'discord'
-cask 'obs'
-cask 'obsidian'
 
 # Fonts
 cask 'font-fira-code'
@@ -158,5 +126,18 @@ cask 'font-reenie-beanie'
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Microsoft Remote Desktop', id: 1295203466
+
+# Personal
+brew 'pass' # GPG-based PW manager
+cask 'tailscale'
+
+cask 'spotify'
+cask 'element'
+cask 'discord'
+cask 'obs'
+cask 'obsidian'
+
 mas 'Strongbox - KeePass & PwSafe', id: 897283731
 mas 'Things', id: 904280696
+mas 'Menu Bar Controller for Sonos', id: 1357379892
+mas 'Goodnotes', id: 1444383602

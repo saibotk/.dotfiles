@@ -19,35 +19,32 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 
-# Rosetta is required for microsoft teams
-softwareupdate --install-rosetta
-
 brew bundle --file ${DOTFILES}/macos/Brewfile
 
 # Fix for https://github.com/Homebrew/homebrew-core/issues/74447
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
+# Activate asimov to automatically exclude node_modules from TM backup
+sudo brew services start asimov
+
 # Enable corepack
 corepack enable
 
-# Install global Composer packages
-${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
-
-# Install Laravel Valet
-$HOME/.config/composer/vendor/bin/valet install
+# Herd setup
+herd -n tld localhost
 
 # Create a Sites directory
 mkdir -p $HOME/git/clickbar
 mkdir -p $HOME/git/konaktiva
 mkdir -p $HOME/git/private
 
-# Mark directories for valet
-valet park $HOME/git/clickbar
-valet park $HOME/git/private
+# Mark directories for herd
+herd park $HOME/git/clickbar
+herd park $HOME/git/private
 
-# Activate asimov to automatically exclude node_modules from TM backup
-sudo brew services start asimov
+# Install global Composer packages
+composer global require tightenco/takeout
 
 read -p "Enter a name for your MacBook, typically 'MacBook YOURNAME' [default: MacBook cb.]: " computername
 computername=${computername:-MacBook cb.}
