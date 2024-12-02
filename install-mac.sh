@@ -34,6 +34,9 @@ corepack enable
 # Install global Composer packages
 ${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
 
+# Install Laravel Valet
+$HOME/.config/composer/vendor/bin/valet install
+
 # Set Valet TLD to .localhost for secure context even in HTTP
 valet -n tld localhost
 

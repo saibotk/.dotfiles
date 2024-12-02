@@ -56,8 +56,27 @@ brew 'pngquant'
 brew 'svgo'
 brew 'gifsicle'
 
+# PHP versions + Extensions
+brew 'php@8.4'
+brew 'shivammathur/extensions/xdebug@8.4'
+brew 'shivammathur/extensions/redis@8.4'
+brew 'shivammathur/extensions/imagick@8.4'
+brew 'shivammathur/extensions/swoole@8.4'
+
+brew 'php@8.3'
+brew 'shivammathur/extensions/xdebug@8.3'
+brew 'shivammathur/extensions/redis@8.3'
+brew 'shivammathur/extensions/imagick@8.3'
+brew 'shivammathur/extensions/swoole@8.3'
+
+brew 'php@8.2'
+brew 'shivammathur/extensions/xdebug@8.2'
+brew 'shivammathur/extensions/redis@8.2'
+brew 'shivammathur/extensions/imagick@8.2'
+brew 'shivammathur/extensions/swoole@8.2'
+
 # Runtimes & package managers
-cask 'herd' # Laravel Herd - PHP environment manager
+brew 'composer'
 brew 'uv' # python dependency manager
 brew 'node'
 brew 'deno'
