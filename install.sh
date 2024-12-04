@@ -29,10 +29,6 @@ path = $DOTFILES/.gitconfig
 """ >> $HOME/.gitconfig
 fi
 
-# tmux
-rm -rf $HOME/.tmux.conf
-ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
-
 # nvim
 rm -rf $HOME/.config/nvim
 mkdir -p $HOME/.config
