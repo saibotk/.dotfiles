@@ -11,3 +11,7 @@ export PATH="$HOME/.node/bin:$PATH"
 
 # Load dotfiles binaries for macos
 export PATH="$DOTFILES/macos/bin:$PATH"
+
+# Add Java binaries to path
+# provides all openjdk binaries, otherwise some are not available
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
