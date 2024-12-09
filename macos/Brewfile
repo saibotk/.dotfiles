@@ -3,6 +3,7 @@ tap 'homebrew/bundle'
 tap 'oven-sh/bun'
 tap 'withgraphite/tap'
 tap 'shivammathur/extensions'
+tap 'leoafarias/fvm'
 
 # Meta tools for this bundle to install properly
 brew 'mas' # Mac App Store manager to install appstore apps
@@ -85,6 +86,8 @@ brew 'oven-sh/bun/bun'
 brew 'go'
 brew 'rustup'
 brew 'cargo-make'
+brew 'flutter'
+brew 'fvm'
 
 # Apps
 cask 'setapp' # Paid App Store for Cleanshot, TablePlus etc.

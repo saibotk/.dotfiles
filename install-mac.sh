@@ -28,6 +28,8 @@ brew bundle --file ${DOTFILES}/macos/Brewfile
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
+flutter --disable-analytics
+
 # Enable corepack
 corepack enable
 
