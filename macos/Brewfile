@@ -86,7 +86,7 @@ brew 'oven-sh/bun/bun'
 brew 'go'
 brew 'rustup'
 brew 'cargo-make'
-brew 'flutter'
+cask 'flutter'
 brew 'fvm'
 
 # Apps
