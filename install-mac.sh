@@ -46,6 +46,15 @@ $HOME/.composer/vendor/bin/valet install
 # Set Valet TLD to .localhost for secure context even in HTTP
 yes | valet tld localhost
 
+# Add bin folder to PATH with higher priority than homebrew.
+# So we can add scripts like our php script for isolated environments
+# to also use the correct php binary when called from JS or other
+# non-interactive scenarios.
+MAC_BIN_ZPROFILE_CMD='export PATH="$HOME/.dotfiles/macos/bin:$PATH"'
+if ! grep -qxF $MAC_BIN_ZPROFILE_CMD "$HOME/.zprofile"; then
+  echo $MAC_BIN_ZPROFILE_CMD >> "$HOME/.zprofile"
+fi
+
 # Create dev directories
 mkdir -p $HOME/git/clickbar
 mkdir -p $HOME/git/konaktiva
