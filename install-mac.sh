@@ -35,6 +35,7 @@ flutter --disable-analytics
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
 # Enable corepack
+corepack disable
 corepack enable
 
 # Install global Composer packages
