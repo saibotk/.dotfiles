@@ -5,6 +5,10 @@ brew update
 brew upgrade
 # Fixes gnupg link conflicts with GPGSuite
 brew unlink gnupg
+
+# Link libpq to access psql
+brew link --force libpq
+
 # Fix corepack / node update issues
 corepack disable
 corepack enable

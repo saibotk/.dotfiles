@@ -28,6 +28,9 @@ brew bundle --file ${DOTFILES}/macos/Brewfile
 # gnupg is not really needed but marked as a dependency for pass
 brew unlink gnupg
 
+# Link libpq to access psql
+brew link --force libpq
+
 flutter --disable-analytics
 
 # Properly symlink openjdk java

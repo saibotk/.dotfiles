@@ -26,6 +26,7 @@ brew 'poppler' # PDF manipulation (needed for some projects)
 brew 'qpdf' # PDF manipulation (needed for some projects)
 brew 'rename'
 brew 'gh' # GitHub CLI
+brew 'libpq' # For psql to use laravel squash migrations etc
 
 # Infrastructure tools
 brew 'awscli'
