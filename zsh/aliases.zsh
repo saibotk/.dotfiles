@@ -21,7 +21,8 @@ fi
 
 # General
 alias reloadshell="source $HOME/.zshrc"
-alias ll="ls -AhlFo --color --group-directories-first"
+alias ls="eza"
+alias ll="eza -al --icons --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | clip"
 alias c="clear"
 alias compile="commit 'compile'"

@@ -106,6 +106,7 @@ cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can a
 cask 'imageoptim' # Tool to optimize images / svgs
 cask 'jordanbaird-ice' # Bartender replacement for cleaner menubar
 brew 'starship' # fancy shell prompt
+brew 'eza' # fancy ls replacement
 cask 'ghostty' # Better terminal
 cask 'rectangle' # Better snap to edge behavior than native
 cask 'raycast' # Better spotlight search
