@@ -1,0 +1,7 @@
+theme = tokyonight
+
+# Fonts
+font-family = Fira Code
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig

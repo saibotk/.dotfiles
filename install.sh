@@ -34,6 +34,11 @@ rm -rf $HOME/.config/nvim
 mkdir -p $HOME/.config
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
+# ghostty
+rm -rf $HOME/.config/ghostty
+mkdir -p $HOME/.config
+ln -s $DOTFILES/ghostty $HOME/.config/ghostty
+
 # NVIM config:
 # Install vim-plug for nvim
 if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
