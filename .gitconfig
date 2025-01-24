@@ -26,8 +26,6 @@
         pr = town
 [git-town]
         sync-feature-strategy = rebase
-[blame]
-        ignoreRevsFile = .git-blame-ignore-revs
 [rerere]
         enabled = true
 [merge]
