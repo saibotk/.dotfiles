@@ -16,10 +16,10 @@
         append = town append
         diff-parent = town diff-parent
         hack = town hack
-        kill = town kill
+        delete = town delete
         prepend = town prepend
         propose = town propose
-        rename-branch = town rename-branch
+        rename = town rename
         repo = town repo
         ship = town ship
         sync = town sync
