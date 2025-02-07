@@ -100,6 +100,7 @@ cask 'docker'
 cask 'chromium', args: { no_quarantine: true }
 cask 'firefox'
 cask 'tunnelblick' # OpenVPN Application to access the company VPN
+cask 'linear-linear'
 
 # Other tools (not necessary for work)
 cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can also be used instead)
