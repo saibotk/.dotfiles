@@ -1,7 +1,6 @@
 # Taps
 tap 'homebrew/bundle'
 tap 'oven-sh/bun'
-tap 'withgraphite/tap'
 tap 'shivammathur/extensions'
 tap 'leoafarias/fvm'
 
@@ -40,7 +39,6 @@ brew 'dive' # Inspect container images
 brew 'git-delta' # Nice diff viewer
 brew 'git-absorb' # amazing tool for better git fixup
 brew 'git-town' # Simple git stacking tool
-brew 'withgraphite/tap/graphite' # Advanced stacking tool with web app
 
 # Quicklook extensions
 cask 'qlmarkdown'
