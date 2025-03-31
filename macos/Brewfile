@@ -90,6 +90,8 @@ brew 'fvm'
 brew 'maven' # for keycloakify etc.
 
 # Apps
+cask 'insomnium' # API Testing Client
+cask 'insomnia'
 cask 'setapp' # Paid App Store for Cleanshot, TablePlus etc.
 cask '1password' # Password Manager
 cask '1password-cli'
