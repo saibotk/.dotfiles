@@ -117,7 +117,6 @@ cask 'microsoft-office'
 cask 'microsoft-teams'
 cask 'notion'
 cask 'figma'
-cask 'around'
 
 # IDEs
 cask 'visual-studio-code'
