@@ -150,6 +150,7 @@ mas 'Xcode', id: 497799835
 
 # Personal
 brew 'pass' # GPG-based PW manager
+brew 'gopass'
 cask 'tailscale'
 
 cask 'spotify'
