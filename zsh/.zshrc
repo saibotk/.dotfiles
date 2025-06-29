@@ -71,6 +71,11 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up			
 bindkey '^[[B' history-substring-search-down
 
+# [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5C' forward-word
+# [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5D' backward-word
+
 # Load macos specific configs
 if [[ $OSTYPE == 'darwin'* ]]; then
   source $DOTFILES/macos/path.zsh
