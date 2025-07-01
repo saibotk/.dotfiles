@@ -30,10 +30,12 @@ brew 'libpq' # For psql to use laravel squash migrations etc
 # Infrastructure tools
 brew 'awscli'
 brew 'b2-tools'
+brew 'minio-mc' # Tools for mirroring and managing S3
 brew 'just' # Better than makefiles
 brew 'ansible'
 brew 'ansible-lint'
 brew 'dive' # Inspect container images
+brew 'sshpass' # To use ansible with ssh passwords
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
@@ -101,6 +103,7 @@ cask 'chromium', args: { no_quarantine: true }
 cask 'firefox'
 cask 'tunnelblick' # OpenVPN Application to access the company VPN
 cask 'linear-linear'
+cask 'ollama-app'
 
 # Other tools (not necessary for work)
 cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can also be used instead)
