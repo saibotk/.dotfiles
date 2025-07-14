@@ -36,6 +36,7 @@ brew 'ansible'
 brew 'ansible-lint'
 brew 'dive' # Inspect container images
 brew 'sshpass' # To use ansible with ssh passwords
+brew '7-zip' # When extracting 7z files from customers e.g. certificates
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
