@@ -7,11 +7,14 @@ DIR=$HOME/.composer/vendor/laravel/valet
 PHP=/opt/homebrew/opt/php/bin/php
 
 # Proxy PHP commands to the "php" executable on the isolated site
+# We get the correct PHP executable for the site via valet.
+# To prevent issues when PHP is updated and the extensions throw warnings, we disable error reporting for warnings.
+# Otherwise, the output may contain warning messages and we want to get the path as the only output.
 if [[ $1 == *"--site="* ]]; then
     SITE=${2#*=}
-    $($PHP "$DIR/cli/valet.php" which-php $SITE) "${@:2}"
+    $($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php $SITE) "${@:2}"
 else
-    $($PHP "$DIR/cli/valet.php" which-php) "${@:1}"
+    $($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php) "${@:1}"
 fi
 
 exit
