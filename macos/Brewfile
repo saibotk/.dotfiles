@@ -54,6 +54,7 @@ brew 'wget'
 brew 'ripgrep'
 
 # Spatie Medialibrary
+brew 'ghostscript'
 brew 'jpegoptim'
 brew 'optipng'
 brew 'pngquant'
