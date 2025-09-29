@@ -26,6 +26,7 @@ brew 'qpdf' # PDF manipulation (needed for some projects)
 brew 'rename'
 brew 'gh' # GitHub CLI
 brew 'libpq' # For psql to use laravel squash migrations etc
+brew 'gpatch' # GNU patch, for patching composer dependencies. MacOS patch does behave differently
 
 # Infrastructure tools
 brew 'awscli'
