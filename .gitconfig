@@ -12,6 +12,8 @@
 [diff]
         algorithm = histogram
         submodule = log
+[init]
+        defaultBranch = main
 [alias]
         append = town append
         diff-parent = town diff-parent
