@@ -63,8 +63,8 @@ Plug 'lewis6991/gitsigns.nvim'
 -- COLORS
 -- ===================
 
--- Plastic colorscheme
-Plug 'jidbo/sonokai'
+-- Tokyo Night colorscheme
+Plug 'folke/tokyonight.nvim'
 
 -- Color higlighting
 Plug 'norcalli/nvim-colorizer.lua'
