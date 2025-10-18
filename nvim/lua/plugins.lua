@@ -76,8 +76,8 @@ Plug 'nvim-lualine/lualine.nvim'
 -- ===================
 
 -- nvim completion
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'mason-org/mason.nvim'
+Plug 'mason-org/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'nvimtools/none-ls.nvim'

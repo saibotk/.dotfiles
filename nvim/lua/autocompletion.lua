@@ -46,47 +46,12 @@ cmp.setup.cmdline(':', {
   })
 })
 
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-
-  local opts = { noremap = true, silent = true, buffer=0 }
-  vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
-  vim.keymap.set("n", "gD", "<cmd>Telescope lsp_implementations<CR>", opts)
-  vim.keymap.set("n", "gf", function() vim.lsp.buf.format {async = true} end, opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "ge", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, opts)
-  vim.keymap.set("n", "gR", vim.lsp.buf.rename, opts)
-  vim.keymap.set("n", "gH", vim.lsp.buf.code_action, opts)
-end
-
 -- LSP INSTALLER
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-
-require("mason-lspconfig").setup_handlers {
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
-            on_attach = on_attach,
-            capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
-    end,
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- For example, a handler override for the `rust_analyzer`:
-    ["rust_analyzer"] = function ()
-        require("rust-tools").setup {}
-    end
-}
-
-
 -- EXTRA SETUP
-require'lspconfig'.lua_ls.setup {
+vim.lsp.config("luals", {
   settings = {
     Lua = {
       runtime = {
@@ -107,7 +72,7 @@ require'lspconfig'.lua_ls.setup {
       },
     },
   },
-}
+})
 
 
 -- LSP SIGNATURE
