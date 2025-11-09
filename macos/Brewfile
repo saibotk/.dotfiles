@@ -85,8 +85,6 @@ brew 'proto' # Package manager installer
 brew 'composer'
 brew 'node' # Only used as a dependency for SVGO
 brew 'go'
-brew 'rustup'
-brew 'cargo-make'
 cask 'flutter'
 brew 'fvm'
 brew 'maven' # for keycloakify etc.
