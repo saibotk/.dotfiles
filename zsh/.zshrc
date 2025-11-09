@@ -87,12 +87,6 @@ source $DOTFILES/zsh/path.zsh
 # Load aliases
 source $DOTFILES/zsh/aliases.zsh
 
-# Dart completions
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f $HOME/.config/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.config/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
 # localcommands
 if [ -f $DOTFILES/zsh/localcommands ]
 then
