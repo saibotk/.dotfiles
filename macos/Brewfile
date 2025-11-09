@@ -85,7 +85,6 @@ brew 'dnsmasq'
 brew 'composer'
 brew 'uv' # python dependency manager
 brew 'node'
-brew 'deno'
 brew 'oven-sh/bun/bun'
 brew 'go'
 brew 'rustup'
