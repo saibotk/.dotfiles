@@ -1,9 +1,6 @@
 # Load Composer tools
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Load Node global installed binaries
-export PATH="$HOME/.node/bin:$PATH"
-
 # Load GNU patch
 export PATH="$HOMEBREW_PREFIX/opt/gpatch/libexec/gnubin:$PATH"
 
