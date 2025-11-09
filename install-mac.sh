@@ -31,8 +31,6 @@ brew unlink gnupg
 # Link libpq to access psql
 brew link --force libpq
 
-flutter --disable-analytics
-
 # Properly symlink openjdk java
 # See https://formulae.brew.sh/formula/openjdk
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk

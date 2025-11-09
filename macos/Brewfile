@@ -1,7 +1,6 @@
 # Taps
 tap 'homebrew/bundle'
 tap 'shivammathur/extensions'
-tap 'leoafarias/fvm'
 
 # Meta tools for this bundle to install properly
 brew 'mas' # Mac App Store manager to install appstore apps
@@ -85,8 +84,6 @@ brew 'proto' # Package manager installer
 brew 'composer'
 brew 'node' # Only used as a dependency for SVGO
 brew 'go'
-cask 'flutter'
-brew 'fvm'
 brew 'maven' # for keycloakify etc.
 
 # Apps
