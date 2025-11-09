@@ -102,7 +102,7 @@ cask '1password' # Password Manager
 cask '1password-cli'
 cask 'arq' # Backup solution
 cask 'docker'
-cask 'chromium', args: { no_quarantine: true }
+cask 'ungoogled-chromium'
 cask 'firefox'
 cask 'tunnelblick' # OpenVPN Application to access the company VPN
 cask 'linear-linear'
