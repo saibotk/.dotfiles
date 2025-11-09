@@ -95,8 +95,6 @@ brew 'fvm'
 brew 'maven' # for keycloakify etc.
 
 # Apps
-cask 'insomnium' # API Testing Client
-cask 'insomnia'
 cask 'setapp' # Paid App Store for Cleanshot, TablePlus etc.
 cask '1password' # Password Manager
 cask '1password-cli'
@@ -107,6 +105,7 @@ cask 'firefox'
 cask 'tunnelblick' # OpenVPN Application to access the company VPN
 cask 'linear-linear'
 cask 'ollama-app'
+cask 'rapidapi' # API Client (formerly called paw)
 
 # Other tools (not necessary for work)
 cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can also be used instead)
