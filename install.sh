@@ -49,18 +49,11 @@ fi
 # Install + update all nvim plugins
 # nvim +PlugUpgrade +PlugUpdate +qall
 
-# Install proto plugins
-proto plugin add --to=global flutter "github://KonstantinKai/proto-flutter-plugin"
-
 # Install common package managers
 proto install node
 proto install pnpm
 proto install bun
 proto install uv
 proto install go
-proto install flutter
-
-# Disable analytics globally
-flutter --disable-analytics
 
 echo "Done! All set up, ready to be used!"

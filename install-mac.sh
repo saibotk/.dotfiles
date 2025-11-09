@@ -71,6 +71,15 @@ sudo scutil --set ComputerName "$computername"
 sudo scutil --set HostName "$computername"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computername"
 
+# Install proto plugins
+proto plugin add --to=global flutter "github://KonstantinKai/proto-flutter-plugin"
+
+# Install Flutter
+proto install flutter
+
+# Disable analytics globally
+flutter --disable-analytics
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos
 
