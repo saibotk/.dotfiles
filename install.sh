@@ -49,4 +49,10 @@ fi
 # Install + update all nvim plugins
 # nvim +PlugUpgrade +PlugUpdate +qall
 
+# Install common package managers
+proto install node
+proto install pnpm
+proto install bun
+proto install uv
+
 echo "Done! All set up, ready to be used!"

@@ -37,12 +37,6 @@ flutter --disable-analytics
 # See https://formulae.brew.sh/formula/openjdk
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
-# Install common package managers
-proto install node
-proto install pnpm
-proto install bun
-proto install uv
-
 # Install global Composer packages
 ${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
 
