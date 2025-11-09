@@ -57,6 +57,7 @@ proto install node
 proto install pnpm
 proto install bun
 proto install uv
+proto install go
 proto install flutter
 
 # Disable analytics globally

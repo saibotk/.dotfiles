@@ -83,7 +83,6 @@ brew 'dnsmasq'
 brew 'proto' # Package manager installer
 brew 'composer'
 brew 'node' # Only used as a dependency for SVGO
-brew 'go'
 brew 'maven' # for keycloakify etc.
 
 # Apps
