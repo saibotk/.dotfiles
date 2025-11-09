@@ -50,7 +50,7 @@ fi
 # nvim +PlugUpgrade +PlugUpdate +qall
 
 # Install proto plugins
-proto plugin add -c global flutter "github://KonstantinKai/proto-flutter-plugin"
+proto plugin add --to=global flutter "github://KonstantinKai/proto-flutter-plugin"
 
 # Install common package managers
 proto install node
