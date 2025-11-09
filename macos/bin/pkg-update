@@ -9,9 +9,9 @@ brew unlink gnupg
 # Link libpq to access psql
 brew link --force libpq
 
-# Fix corepack / node update issues
-corepack disable
-corepack enable
+# Update global tools e.g. pnpm, bun, node etc..
+proto outdated -c global --update --yes
+proto install -c global
 
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
