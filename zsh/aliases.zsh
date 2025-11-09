@@ -23,6 +23,7 @@ fi
 alias reloadshell="source $HOME/.zshrc"
 alias ls="eza"
 alias ll="eza -al --icons --group-directories-first"
+alias cat="bat"
 alias shrug="echo '¯\_(ツ)_/¯' | clip"
 alias c="clear"
 alias compile="commit 'compile'"
