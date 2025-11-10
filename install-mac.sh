@@ -38,6 +38,19 @@ sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/Java
 # Install global Composer packages
 ${HOMEBREW_PREFIX}/bin/composer global require laravel/installer laravel/valet tightenco/takeout
 
+# Ensure Valet services see the Homebrew PATH even when launched via launchd.
+# Otherwise, PHP may not find binaries that are invoked via code.
+mkdir -p "$HOME/.config/valet"
+cat <<'EOF' > "$HOME/.config/valet/.valet-env.php"
+<?php
+
+return [
+  "*" => [
+    "PATH" => "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  ]
+];
+EOF
+
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
