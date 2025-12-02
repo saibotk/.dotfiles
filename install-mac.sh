@@ -20,8 +20,6 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-
 brew bundle --file ${DOTFILES}/macos/Brewfile
 
 # Fix for https://github.com/Homebrew/homebrew-core/issues/74447
