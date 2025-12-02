@@ -60,6 +60,11 @@ brew 'svgo'
 brew 'gifsicle'
 
 # PHP versions + Extensions
+brew 'php@8.5'
+brew 'shivammathur/extensions/xdebug@8.5'
+brew 'shivammathur/extensions/redis@8.5'
+brew 'shivammathur/extensions/imagick@8.5'
+
 brew 'php@8.4'
 brew 'shivammathur/extensions/xdebug@8.4'
 brew 'shivammathur/extensions/redis@8.4'
