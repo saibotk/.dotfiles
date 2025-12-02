@@ -12,9 +12,17 @@ PHP=/opt/homebrew/opt/php/bin/php
 # Otherwise, the output may contain warning messages and we want to get the path as the only output.
 if [[ $1 == *"--site="* ]]; then
     SITE=${2#*=}
-    $($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php $SITE) "${@:2}"
+    if ! PHP_BIN=$($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php $SITE 2>/dev/null); then
+        PHP_BIN=$PHP
+    fi
+    [ -z "$PHP_BIN" ] && PHP_BIN=$PHP
+    $PHP_BIN "${@:2}"
 else
-    $($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php) "${@:1}"
+    if ! PHP_BIN=$($PHP -d error_reporting=1 "$DIR/cli/valet.php" which-php 2>/dev/null); then
+        PHP_BIN=$PHP
+    fi
+    [ -z "$PHP_BIN" ] && PHP_BIN=$PHP
+    $PHP_BIN "${@:1}"
 fi
 
 exit
