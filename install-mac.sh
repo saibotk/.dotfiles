@@ -86,10 +86,10 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 proto plugin add --to=global flutter "github://KonstantinKai/proto-flutter-plugin"
 
 # Install Flutter
-proto install flutter
+proto install -c global flutter
 
 # Disable analytics globally
-flutter --disable-analytics
+~/.proto/bin/flutter --disable-analytics
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos
