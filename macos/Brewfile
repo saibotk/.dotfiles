@@ -1,5 +1,4 @@
 # Taps
-tap 'homebrew/bundle'
 tap 'shivammathur/extensions'
 
 # Meta tools for this bundle to install properly
