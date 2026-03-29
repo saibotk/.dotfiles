@@ -8,7 +8,6 @@ zstyle ':znap:*:*' git-maintenance off
 source $HOME/.znap/znap/znap.zsh
 
 # shell options
-setopt correct                # Auto correct mistakes
 setopt completealiases
 setopt extendedglob           # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob             # Case insensitive globbing
