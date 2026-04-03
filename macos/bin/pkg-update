@@ -19,8 +19,8 @@ composer global upgrade
 echo "\n > Running valet install...\n"
 valet install
 
-echo "\n > Upgrading nvim packages...\n"
-nvim +PlugUpgrade +PlugUpdate +TSUpdate +MasonUpdate +qall
+echo "\n > Installing nvim packages from lockfile...\n"
+nvim --headless "+Lazy! restore" +qa
 
 echo "\n > Upgrading znap plugins...\n"
 znap-update

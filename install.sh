@@ -39,15 +39,8 @@ rm -rf $HOME/.config/ghostty
 mkdir -p $HOME/.config
 ln -s $DOTFILES/ghostty $HOME/.config/ghostty
 
-# NVIM config:
-# Install vim-plug for nvim
-if [ ! -f ~/.config/nvim/autoload/plug.vim ]; then
-  echo "Installing vim-plug for nvim"
-  curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
-# Install + update all nvim plugins
-# nvim +PlugUpgrade +PlugUpdate +qall
+# Install NVIM plugins:
+nvim --headless "+Lazy! restore" +qa
 
 # Install common package managers
 proto install node
