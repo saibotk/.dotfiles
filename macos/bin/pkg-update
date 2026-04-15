@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Ensure we use the global PHP version to prevent issues from running this script from an isolated
+# directory, which then affects the global composer requirements etc.
+USE_GLOBAL_PHP=1
+
 echo "\n > Upgrading brew packages...\n"
 brew update
 brew upgrade

@@ -6,6 +6,16 @@
 VALET_DIR=$HOME/.composer/vendor/laravel/valet
 PHP=$HOMEBREW_PREFIX/opt/php/bin/php
 
+# If the env $USE_GLOBAL_PHP=1 is set, we use the global PHP binary instead of the one provided by valet.
+if [[ $USE_GLOBAL_PHP == "1" ]]; then
+    exec "$PHP" "$@"
+fi
+
+# Auto-detect global Composer binaries being called and proxy them to the global PHP to prevent issues with isolated environments.
+if [[ $@ == *"$HOME/.composer/vendor/"* ]]; then
+    exec "$PHP" "$@"
+fi
+
 # Proxy PHP commands to the "php" executable on the isolated site
 # We get the correct PHP executable for the site via valet.
 # To prevent issues when PHP is updated and the extensions throw warnings, we disable error reporting for warnings.
