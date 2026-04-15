@@ -42,10 +42,6 @@ brew 'git-delta' # Nice diff viewer
 brew 'git-absorb' # amazing tool for better git fixup
 brew 'git-town' # Simple git stacking tool
 
-# Quicklook extensions
-cask 'qlmarkdown'
-cask 'quicklook-json'
-
 # Nvim & various dependencies
 brew 'neovim'
 brew 'wget'
