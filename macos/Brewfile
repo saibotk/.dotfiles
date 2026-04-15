@@ -30,8 +30,6 @@ brew 'awscli'
 brew 'b2-tools'
 brew 'minio-mc' # Tools for mirroring and managing S3
 brew 'just' # Better than makefiles
-brew 'ansible'
-brew 'ansible-lint'
 brew 'dive' # Inspect container images
 brew 'sshpass' # To use ansible with ssh passwords
 brew '7-zip' # When extracting 7z files from customers e.g. certificates
