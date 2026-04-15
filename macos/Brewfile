@@ -80,6 +80,11 @@ brew 'shivammathur/extensions/xdebug@8.2'
 brew 'shivammathur/extensions/redis@8.2'
 brew 'shivammathur/extensions/imagick@8.2'
 
+# Legacy projects
+brew 'php@8.1'
+brew 'php@7.3'
+brew 'php@7.4'
+
 # Valet requirements
 brew 'nginx'
 brew 'dnsmasq'
