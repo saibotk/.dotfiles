@@ -160,6 +160,7 @@ cask 'element'
 cask 'discord'
 cask 'obs'
 cask 'obsidian'
+cask 'prismlauncher' # Minecraft
 
 mas 'Strongbox - KeePass & PwSafe', id: 897283731
 mas 'Things', id: 904280696
