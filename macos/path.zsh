@@ -14,4 +14,4 @@ export PATH="$DOTFILES/macos/bin:$PATH"
 
 # Add Java binaries to path
 # provides all openjdk binaries, otherwise some are not available
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
