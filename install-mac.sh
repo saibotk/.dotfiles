@@ -50,10 +50,11 @@ return [
 EOF
 
 # Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
+VALET_BIN="$HOME/.composer/vendor/bin/valet"
+$VALET_BIN install
 
 # Set Valet TLD to .localhost for secure context even in HTTP
-yes | valet tld localhost
+yes | $VALET_BIN tld localhost
 
 # Create dev directories
 mkdir -p $HOME/git/clickbar
@@ -61,8 +62,8 @@ mkdir -p $HOME/git/konaktiva
 mkdir -p $HOME/git/private
 
 # Mark directories for Valet
-valet park $HOME/git/clickbar
-valet park $HOME/git/private
+$VALET_BIN park $HOME/git/clickbar
+$VALET_BIN park $HOME/git/private
 
 read -p "Enter a name for your MacBook, typically 'MacBook YOURNAME' [default: MacBook cb.]: " computername
 computername=${computername:-MacBook cb.}
