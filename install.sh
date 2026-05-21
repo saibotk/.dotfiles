@@ -42,11 +42,4 @@ ln -s $DOTFILES/ghostty $HOME/.config/ghostty
 # Install NVIM plugins:
 nvim --headless "+Lazy! restore" +qa
 
-# Install common package managers
-proto install node
-proto install pnpm
-proto install bun
-proto install uv
-proto install go
-
 echo "Done! All set up, ready to be used!"

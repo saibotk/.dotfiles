@@ -74,14 +74,13 @@ sudo scutil --set ComputerName "$computername"
 sudo scutil --set HostName "$computername"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computername"
 
-# Install proto plugins
-proto plugin add --to=global flutter "github://KonstantinKai/proto-flutter-plugin"
-
-# Install Flutter
-proto install -c global flutter
-
-# Disable analytics globally
-~/.proto/bin/flutter --disable-analytics
+# Disable analytics globally for Dart and Flutter tools
+mkdir -p ~/.dart-tool
+cat > ~/.dart-tool/dart-flutter-telemetry.config <<'EOF'
+reporting=0
+flutter-tool=2024-12-09,1
+dart-tool=2025-11-09,1
+EOF
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos

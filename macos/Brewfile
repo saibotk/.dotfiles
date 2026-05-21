@@ -85,9 +85,13 @@ brew 'nginx'
 brew 'dnsmasq'
 
 # Runtimes & package managers
-brew 'mise' # Package manager & tool installer
 brew 'composer'
-brew 'node' # Only used as a dependency for SVGO
+brew 'node' # JS runtime, also a dependency for SVGO
+brew 'pnpm' # Our main package manager for JS, can manage multiple versions of node and itself
+brew 'oven-sh/bun/bun' # Bun (JS runtime and package manager)
+brew 'python' # Python runtime (uv can reuse this)
+brew 'uv' # Python version manager
+brew 'fvm' # Flutter version manager
 brew 'maven' # for keycloakify etc.
 
 # Apps
