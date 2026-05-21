@@ -1,6 +1,9 @@
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
+# Disable telemetry e.g. in GitHub CLI etc.
+export DO_NOT_TRACK=true
+
 # Load zsh-snap (znap) plugin manager
 zstyle ':znap:*' repos-dir $HOME/.znap
 # Disable git maintenance to prevent background git ssh requests
