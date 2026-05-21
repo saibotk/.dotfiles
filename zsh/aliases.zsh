@@ -7,6 +7,8 @@ if [[ $OSTYPE == 'darwin'* ]]; then
     alias ls="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin/ls"
     alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
     alias sup="$DOTFILES/macos/bin/pkg-update"
+    # cb cli only works with PHP 8.4 atm
+    alias cb="$HOMEBREW_PREFIX/opt/php@8.4/bin/php $HOME/.composer/vendor/bin/cb"
 fi
 
 # Linux specifics
