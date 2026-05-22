@@ -15,6 +15,9 @@ fi
 rm -rf $HOME/.zshrc
 ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
 
+# Install package manager release age policies
+source "$DOTFILES/install-policies.sh"
+
 # Relink other software configs
 
 # git
