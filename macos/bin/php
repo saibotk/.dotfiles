@@ -4,7 +4,7 @@
 # invoked in JS scripts to use the correct isolated version.
 
 VALET_DIR=$HOME/.composer/vendor/laravel/valet
-PHP=$HOMEBREW_PREFIX/opt/php/bin/php
+PHP=/opt/homebrew/opt/php/bin/php
 
 # If the env $USE_GLOBAL_PHP=1 is set, we use the global PHP binary instead of the one provided by valet.
 if [[ $USE_GLOBAL_PHP == "1" ]]; then
