@@ -1,5 +1,6 @@
 # Taps
-tap 'shivammathur/extensions'
+tap 'shivammathur/php', trusted: true
+tap 'shivammathur/extensions', trusted: true
 
 # Meta tools for this bundle to install properly
 brew 'mas' # Mac App Store manager to install appstore apps
@@ -88,7 +89,7 @@ brew 'dnsmasq'
 brew 'composer'
 brew 'node' # JS runtime, also a dependency for SVGO
 brew 'pnpm' # Our main package manager for JS, can manage multiple versions of node and itself
-brew 'oven-sh/bun/bun' # Bun (JS runtime and package manager)
+brew 'oven-sh/bun/bun', trusted: true # Bun (JS runtime and package manager)
 brew 'python' # Python runtime (uv can reuse this)
 brew 'uv' # Python version manager
 brew 'fvm' # Flutter version manager
@@ -99,11 +100,11 @@ cask 'setapp' # Paid App Store for Cleanshot, TablePlus etc.
 cask '1password' # Password Manager
 cask '1password-cli'
 cask 'arq' # Backup solution
-cask 'docker'
+cask 'docker-desktop'
 cask 'ungoogled-chromium'
 cask 'firefox'
 cask 'tunnelblick' # OpenVPN Application to access the company VPN
-cask 'linear-linear'
+cask 'linear'
 cask 'ollama-app'
 cask 'rapidapi' # API Client (formerly called paw)
 
