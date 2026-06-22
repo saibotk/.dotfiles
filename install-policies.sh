@@ -19,6 +19,18 @@ EOF
   echo "Created $HOME/.npmrc"
 fi
 
+# PNPM global config
+if [[ -e "$HOME/.config/pnpm/config.yaml" ]]; then
+  warn_exists "$HOME/.config/pnpm/config.yaml"
+else
+  mkdir -p "$HOME/.config/pnpm"
+
+  cat > "$HOME/.config/pnpm/config.yaml" <<'EOF'
+minimum-release-age: 10080
+EOF
+  echo "Created $HOME/.config/pnpm/config.yaml"
+fi
+
 # Bun
 if [[ -e "$HOME/.bunfig.toml" ]]; then
   warn_exists "$HOME/.bunfig.toml"
