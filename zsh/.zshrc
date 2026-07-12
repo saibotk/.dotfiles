@@ -61,7 +61,6 @@ znap source marlonrichert/zcolors
 znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
-znap source jessarcher/zsh-artisan
 
 # Extra init code needed for zcolors.
 znap eval zcolors zcolors
