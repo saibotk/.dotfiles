@@ -36,6 +36,7 @@ brew 'sshpass' # To use ansible with ssh passwords
 brew '7-zip' # When extracting 7z files from customers e.g. certificates
 brew 'osv-scanner' # Scan for vulnerable packages
 brew 'zizmor' # Tool to lint GitHub workflows for security issues
+brew 'podman' # Container runtime, alternative to docker
 
 # Git tools
 brew 'git-delta' # Nice diff viewer
