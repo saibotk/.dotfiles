@@ -1,6 +1,9 @@
 # Load Composer tools
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+# Load PNPM tools
+export PATH="$HOME/.local/share/pnpm/bin:$PATH"
+
 # Load GNU patch
 export PATH="$HOMEBREW_PREFIX/opt/gpatch/libexec/gnubin:$PATH"
 

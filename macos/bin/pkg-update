@@ -13,6 +13,9 @@ brew unlink gnupg
 # Link libpq to access psql
 brew link --force libpq
 
+echo "\n > Upgrading global pnpm packages...\n"
+pnpm update -g
+
 echo "\n > Upgrading global composer packages...\n"
 composer global upgrade
 
