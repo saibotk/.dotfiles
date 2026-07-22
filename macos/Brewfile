@@ -108,6 +108,7 @@ cask 'tunnelblick' # OpenVPN Application to access the company VPN
 cask 'linear'
 cask 'ollama-app'
 cask 'rapidapi' # API Client (formerly called paw)
+cask 'chatgpt' # ChatGPT / Codex client
 
 # Other tools (not necessary for work)
 cask 'gpg-suite' # GPG handling for signing commits and email (SSH signing can also be used instead)
