@@ -82,6 +82,9 @@ flutter-tool=2024-12-09,1
 dart-tool=2025-11-09,1
 EOF
 
+# Install gh stack plugin
+${HOMEBREW_PREFIX}/bin/gh extension install github/gh-stack
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ${DOTFILES}/macos/.macos
 
