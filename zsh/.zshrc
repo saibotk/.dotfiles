@@ -57,13 +57,13 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(expand-or-complete history-beginning-search-back
 
 # Plugins
 znap source jimhester/per-directory-history
-znap source marlonrichert/zcolors
 znap source zsh-users/zsh-history-substring-search
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 
-# Extra init code needed for zcolors.
-znap eval zcolors zcolors
+# Colors for completions, git, less and grep
+znap clone marlonrichert/zcolors
+znap eval zcolors "~[zcolors]/zcolors ${(q)LS_COLORS}"
 
 # Bind history key to substring plugin
 zmodload zsh/terminfo
