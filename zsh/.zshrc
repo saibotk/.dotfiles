@@ -10,6 +10,14 @@ zstyle ':znap:*' repos-dir $HOME/.znap
 zstyle ':znap:*:*' git-maintenance off
 source $HOME/.znap/znap/znap.zsh
 
+# Workaround fix for incorrect ls command extraction from aliases when using eza as ls replacement.
+..znap.ls() {
+  local -a ls_cmd
+  ls_cmd=(${(z)${aliases[ls]-ls}})
+
+  print -nr -- "$("${ls_cmd[1]}" --color=always -d -- "$1") "
+}
+
 # shell options
 setopt completealiases
 setopt extendedglob           # Extended globbing. Allows using regular expressions with *
