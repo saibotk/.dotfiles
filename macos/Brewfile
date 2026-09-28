@@ -118,6 +118,7 @@ cask 'thaw' # Bartender replacement for cleaner menubar
 brew 'starship' # fancy shell prompt
 brew 'eza' # fancy ls replacement
 brew 'bat' # fancy cat replacement
+brew 'mole' # Cleanup Mac tool
 cask 'ghostty' # Better terminal
 cask 'rectangle' # Better snap to edge behavior than native
 cask 'raycast' # Better spotlight search
