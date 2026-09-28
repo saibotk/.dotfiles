@@ -121,6 +121,7 @@ brew 'bat' # fancy cat replacement
 cask 'ghostty' # Better terminal
 cask 'rectangle' # Better snap to edge behavior than native
 cask 'raycast' # Better spotlight search
+cask 'prusaslicer' # 3D printing software
 
 # Office / Communication
 cask 'signal'
