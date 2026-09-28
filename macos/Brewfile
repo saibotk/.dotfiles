@@ -85,6 +85,7 @@ brew 'php@7.4'
 # Valet requirements
 brew 'nginx'
 brew 'dnsmasq'
+brew 'ngrok'
 
 # Runtimes & package managers
 brew 'composer'
